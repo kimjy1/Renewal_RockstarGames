@@ -1,0 +1,107 @@
+@charset "UTF-8";
+#wrap {
+  width: 100%;
+  height: auto;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: gold;
+  display: flex;
+}
+
+/* 네비게이션 뼈대 */
+nav {
+  width: 85%;
+  height: 50px;
+}
+
+/* 헤더에 있는 네비게이션 */
+nav ul{
+  width: 85%;
+  height: 50px;
+  background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  line-height: 50px;
+  margin: 0 120px;
+}
+
+/* 헤더 메뉴 마우스오버 효과 */
+nav ul li:hover {
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: chartreuse;
+}
+
+nav ul li:hover::after{
+  width: 100%;
+}
+
+/* 로고 */
+#logo {
+  width: 90px;
+  height: 60px;
+  background-color: black;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* 로고 이미지 */
+#logo img {
+  width: 90px;
+  height: 60px;
+}
+
+/* 로그인/회원가입 */
+.loginbox {
+  width: 230px;
+  height: 50px;
+  background-color: green;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 로그인 */
+.login {
+  background-color: purple;
+  padding: 10px 20px;
+}
+
+/* 회원가입 */
+.signup {
+  padding: 10px 30px;
+  background-color: aqua;
+}
+
+/* 로그인 마우스오버 효과 */
+.login:hover {
+  cursor: pointer;
+}
+
+/* 회원가입 마우스오버 효과 */
+.signup:hover {
+  opacity: 0.8;
+}
+
+#slider {
+  width: 100%;
+  height: 720px;
+}
+
+#slider video {
+  width: 100%;
+  height: 720px;
+}
