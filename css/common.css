@@ -99,18 +99,25 @@ nav ul li:hover::after{
 /* 비디오 영역*/
 #slider {
   width: 100%;
+  max-width: 1080px;
   height: auto;
+  background-color: blueviolet;
 }
 
 #slider video {
   width: 100%;
-  height: 720px;
-  min-height: 720px;
+  max-width: 1080px;
+  height: auto;
 }
 
-@media (max-width: 380px) {
+@media all and (max-width:767px) { 
   #slider video {
-    width: 750px;
-    height: 1280px;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
   }
 }
+
+@media all and (min-width:768px) and (max-width:1023px) { /*스타일입력*/} 
+
+@media all and (min-width:1024px) { /*스타일입력*/} 
