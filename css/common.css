@@ -107,9 +107,9 @@ nav ul li:hover::after{
   height: 720px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   #slider video {
-    width: 320px;
+    width: 380px;
     height: auto;
   }
 }
