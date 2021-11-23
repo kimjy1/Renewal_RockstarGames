@@ -96,6 +96,7 @@ nav ul li:hover::after{
   opacity: 0.8;
 }
 
+/* 비디오 영역*/
 #slider {
   width: 100%;
   height: auto;
