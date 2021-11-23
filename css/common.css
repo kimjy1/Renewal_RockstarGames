@@ -110,11 +110,21 @@ nav ul li:hover::after{
   height: auto;
 }
 
+@media all and (max-width:380px) { 
+  #slider video {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
 @media all and (max-width:767px) { 
   #slider video {
     width: 100%;
     max-width: 720px;
     height: auto;
+    overflow: hidden;
   }
 }
 
