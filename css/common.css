@@ -9,12 +9,11 @@ header {
     width: 100%;
     height: 70px;
     background-color: #000;
-    display: flex;
     position: sticky;
     top: 0;
 }
 
-/* 로고 */
+/* 헤더 - 로고 */
 #logo {
     width: 90px;
     height: 60px;
@@ -24,20 +23,14 @@ header {
     left: 5px;
 }
 
-/* 로고 이미지 */
+/* 헤더 - 로고 이미지 */
 #logo img {
     width: 90px;
     height: 60px;
 }
 
-/* 네비게이션 뼈대 */
-nav {
-    width: 85%;
-    height: 50px;
-}
-
-/* 헤더에 있는 네비게이션 */
-nav ul {
+/* 헤더 - 네비게이션 */
+header ul {
     width: 85%;
     height: 50px;
     display: flex;
@@ -47,11 +40,69 @@ nav ul {
     margin: 0 120px;
 }
 
-nav ul li {
+/* 헤더 - 네비게이션 메뉴 */
+header ul li {
     color: #fff;
     font-size: 0.8em;
+    padding: 10px 20px;
+    line-height: 30px;
 }
 
+/* 헤더 - 로그인/회원가입 */
+.loginbox {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8em;
+    margin: 0 30px;
+}
+
+/* 헤더 - 로그인 */
+.login {
+    padding: 10px 20px;
+}
+
+/* 헤더 - 회원가입 */
+.signup {
+    padding: 10px 30px;
+}
+
+/* 헤더 - 메뉴 마우스호버 효과 뼈대 */
+header ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: #ff9900;
+}
+
+/* 헤더 - 마우스오버 효과 */
+:is(.login, .home, .mobile, .laptop):hover {
+    cursor: url(../img/cursor.cur), auto;
+}
+
+header ul li:hover {
+    cursor: pointer;
+}
+
+header ul li:hover::after {
+    width: 100%;
+}
+
+.login:hover {
+    background-color: #ff9900;
+    color: #000;
+}
+
+.mobile:hover {
+    cursor: pointer;
+}
+
+/* 반응형 -  헤더 로고 */
 .headertitle {
     display: none;
 }
@@ -61,113 +112,12 @@ nav ul li {
     font-size: 0.9em;
 }
 
-/* 로그인/회원가입 */
-.loginbox {
-    width: 230px;
-    height: 50px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
-    font-size: 0.8em;
-}
-
-/* 로그인 */
-.login {
-    background-color: #ff9900;
-    padding: 10px 20px;
-}
-
-/* 회원가입 */
-.signup {
-    padding: 10px 30px;
-}
-
-/* 메뉴 마우스호버 효과 뼈대 */
-nav ul li::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background-color: chartreuse;
-}
-
-/* 헤더 마우스오버 효과 */
-:is(.login, .home, nav ul li, .mobilemenu):hover {
-    cursor: pointer;
-}
-
-nav ul li:hover::after {
-    width: 100%;
-}
-
-.signup:hover {
-    opacity: 0.8;
-}
-
-.mobilemenu img {
+/* 반응형 - 메뉴 */
+.mobile {
     display: none;
 }
 
-/* 반응형 */
-@media all and (max-width:479px) {
-
-    #slider video {
-        width: 100%;
-        max-width: 479px;
-        height: auto;
-    }
-}
-
-@media all and (min-width:480px) and (max-width:767px) {
-    .headertitle {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    nav ul li {
-        display: block;
-        line-height: 40px;
-    }
-
-    #slider video {
-        width: 100%;
-        max-width: 767px;
-        height: auto;
-    }
-
-    .loginbox {
-        display: none;
-    }
-
-    .mobilemenu {
-        width: 80px;
-        height: 70px;
-    }
-
-    .mobilemenu img {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-@media all and (min-width:768px) and (max-width:1023px) {
-    #slider video {
-        width: 100%;
-        max-width: 1023px;
-        height: auto;
-    }
-}
-
-@media all and (min-width:1024px) and (max-width:1920px) {
-    #slider video {
-        width: 100%;
-        max-width: 1920px;
-        height: auto;
-    }
+/* 반응형 - 노트북 메뉴 */
+.laptop {
+    display: none;
 }

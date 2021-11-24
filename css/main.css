@@ -1,1 +1,152 @@
 @charset "UTF-8";
+
+/* 슬라이더 비디오 */
+#slider video {
+    width: 100%;
+    height: auto;
+}
+
+/* 반응형
+@media all and (max-width:479px) {
+    header {
+        display: flex;
+    }
+
+    .headertitle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 40px;
+    }
+
+    #slider video {
+        width: 100%;
+        max-width: 767px;
+        height: auto;
+    }
+
+    .loginbox {
+        display: none;
+    }
+
+    .mobilemenu {
+        width: 80px;
+        height: 70px;
+    }
+
+    .mobilemenu img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    .headertitle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 40px;
+    }
+
+    #slider video {
+        width: 100%;
+        max-width: 767px;
+        height: auto;
+    }
+
+    .loginbox {
+        display: none;
+    }
+
+    
+}
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    header {
+        display: flex;
+    }
+
+    .mobilemenu {
+        width: 80px;
+        height: 70px;
+    }
+
+    .mobilemenu img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #slider video {
+        max-width: 1023px;
+    }
+}
+*/
+@media all and (min-width:1024px) and (max-width:1920px) {
+    header {
+        display: flex;
+    }
+
+    #slider video {
+        max-width: 1920px;
+    }
+}
+
+section {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: blue;
+}
+
+article {
+    width: 25%;
+    height: auto;
+    background-color: brown;
+}
+
+article img {
+    width: 30%;
+    height: auto;
+}
+
+article a {
+    vertical-align: top;
+}
+
+article span {
+    font-size: 0.8em;
+    color: #fff;
+    margin-right: 20px;
+}
+
+article time {
+    font-size: 0.8em;
+    color: #bcbcbc;
+}
