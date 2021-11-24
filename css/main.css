@@ -122,13 +122,12 @@ section {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    background-color: blue;
 }
 
 article {
     width: 25%;
     height: auto;
-    background-color: brown;
+    border: 1px solid gray;
 }
 
 article img {
@@ -142,7 +141,7 @@ article a {
 
 article span {
     font-size: 0.8em;
-    color: #fff;
+    color: #000;
     margin-right: 20px;
 }
 
