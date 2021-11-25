@@ -6,6 +6,10 @@
     height: auto;
 }
 
+article:hover {
+    cursor: pointer;
+}
+
 /* 반응형
 @media all and (max-width:479px) {
     header {
@@ -115,37 +119,104 @@
     }
 }
 
+/* 섹션 */
 section {
     width: 100%;
     max-width: 1920px;
-    height: auto;
+    height: 250px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
+    position: relative;
 }
 
+/* 아티클 */
 article {
     width: 25%;
     height: auto;
-    border: 1px solid gray;
+    max-height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 1px solid #666; */
 }
 
-article img {
-    width: 30%;
-    height: auto;
+article:nth-of-type(1) {
+    background-image: url("../img/newsimg1.jpg");
 }
 
-article a {
-    vertical-align: top;
+article:nth-of-type(2) {
+    background-image: url("../img/newsimg2.jpg");
 }
 
-article span {
-    font-size: 0.8em;
-    color: #000;
-    margin-right: 20px;
+article:nth-of-type(3) {
+    background-image: url("../img/newsimg3.jpg");
+}
+
+/* 아티클 내 텍스트 */
+article time,
+h4,
+p {
+    font-size: 0.85em;
+    margin-left: 240px;
 }
 
 article time {
-    font-size: 0.8em;
+    display: block;
     color: #bcbcbc;
+    line-height: 40px;
+}
+
+article p {
+    line-height: 40px;
+    color: #fff;
+}
+
+article h4 {
+    width: 220px;
+    height: 120px;
+    color: #fff;
+}
+
+section a {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    color: #000;
+}
+
+section a img {
+    width: 15px;
+    height: 15px;
+}
+
+.more_news {
+    position: absolute;
+    right: -20px;
+    bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+section a:hover .more_news {
+    right: -28px;
+}
+
+main {
+    width: 1780px;
+    height: auto;
+    margin: 0 auto;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+aside h2 {
+    color: #fff;
 }

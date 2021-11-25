@@ -2,6 +2,7 @@
 #wrap {
     width: 100%;
     height: auto;
+    background-color: #000;
 }
 
 /* 헤더 */
@@ -11,6 +12,7 @@ header {
     background-color: #000;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 /* 헤더 - 로고 */
@@ -80,7 +82,7 @@ header ul li::after {
     background-color: #ff9900;
 }
 
-/* 헤더 - 마우스오버 효과 */
+/* 헤더 - 마우스오버 효과 시작 */
 :is(.login, .home, .mobile, .laptop):hover {
     cursor: url(../img/cursor.cur), auto;
 }
@@ -101,6 +103,8 @@ header ul li:hover::after {
 .mobile:hover {
     cursor: pointer;
 }
+/* 헤더 - 마우스오버 효과 끝 */
+
 
 /* 반응형 -  헤더 로고 */
 .headertitle {
