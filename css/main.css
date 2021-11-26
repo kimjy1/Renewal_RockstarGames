@@ -141,18 +141,18 @@ article {
 }
 
 article:nth-of-type(1) {
-    background-image: url("../img/newsimg1.jpg");
+    background-image: url("../img/newsimg4.jpg");
 }
 
 article:nth-of-type(2) {
-    background-image: url("../img/newsimg2.jpg");
+    background-image: url("../img/newsimg1.jpg");
 }
 
 article:nth-of-type(3) {
     background-image: url("../img/newsimg3.jpg");
 }
 
-/* 아티클 내 텍스트 */
+/* 아티클 내 요소 시작 */
 article time,
 h4,
 p {
@@ -198,16 +198,25 @@ section a img {
 section a:hover .more_news {
     right: -28px;
 }
+/* 아티클 내 요소 끝 */
 
 main {
-    width: 1780px;
+    width: 1700px;
     height: auto;
     margin: 0 auto;
+    overflow: hidden;
+    background-color: aqua;
 }
 
 main img {
     width: 100%;
     height: auto;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+main img:hover {
+    transform: scale(1.0);
 }
 
 aside {
