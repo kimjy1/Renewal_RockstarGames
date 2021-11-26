@@ -227,25 +227,29 @@ main img:hover {
     height: 250px;
     background-color: #fff;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .snsbox {
-    width: 80%;
-    height: auto;
-    background-color: aqua;
     display: flex;
     justify-content: center;
-    gap: 0 10px;
+    width: 80%;
+    height: 50px;
+    background-color: #000;
+    clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
 }
 
 .social h2 {
     display: inline-block;
     color: #fff;
-    clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
+    line-height: 50px;
 }
 
 .social h2::after {
     content: "ㅣ";
+    margin: 0 20px;
 }
 
 .social img {
