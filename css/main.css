@@ -299,10 +299,6 @@ aside #imagebox img {
     height: auto;
 }
 
-aside #imagebox img:not(#img1) {
-    display: none;
-}
-
 aside #imagebox span {
     width: 500px;
     height: 150px;

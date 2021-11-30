@@ -19,7 +19,9 @@ function clickevent1() {
   clicktest2.style.transition = "all .5s ease-in-out";
   clicktest3.style.transform = "scale(0.9)";
   clicktest3.style.transition = "all .5s ease-in-out";
-  imageChange1.src = "../img/1.gif";
+  imageChange1.style.display = "block";
+  imageChange2.style.display = "none";
+  imageChange3.style.display = "none";
 }
 
 const clicktest2 = document.getElementById('click2');
@@ -33,7 +35,9 @@ function clickevent2() {
   clicktest2.style.transition = "all .5s ease-in-out";
   clicktest3.style.transform = "scale(0.9)";
   clicktest3.style.transition = "all .5s ease-in-out";
-  imageChange2.src = "../img/2.gif";
+  imageChange1.style.display = "none";
+  imageChange2.style.display = "block";
+  imageChange3.style.display = "none";
 }
 
 const clicktest3 = document.getElementById('click3');
@@ -47,5 +51,7 @@ function clickevent3() {
   clicktest2.style.transition = "all .5s ease-in-out";
   clicktest3.style.transform = "scale(1.2)";
   clicktest3.style.transition = "all .5s ease-in-out";
-  imageChange2.src = "../img/3.gif";
+  imageChange1.style.display = "none";
+  imageChange2.style.display = "none";
+  imageChange3.style.display = "block";
 }
