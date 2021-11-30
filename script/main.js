@@ -7,9 +7,12 @@ window.onload = function () {
 }
 
 const container = document.getElementById('image3dbones');
-
 const clicktest1 = document.getElementById('click1');
 const imageChange1 = document.getElementById('img1');
+const textbox1 = document.getElementById('asidewrapbox1');
+const textbox2 = document.getElementById('asidewrapbox2');
+const textbox3 = document.getElementById('asidewrapbox3');
+
 clicktest1.addEventListener("click", clickevent1);
 function clickevent1() {
   container.style.alignContent = "flex-end";
@@ -22,6 +25,9 @@ function clickevent1() {
   imageChange1.style.display = "block";
   imageChange2.style.display = "none";
   imageChange3.style.display = "none";
+  textbox1.style.display = "block";
+  textbox2.style.display = "none";
+  textbox3.style.display = "none";
 }
 
 const clicktest2 = document.getElementById('click2');
@@ -38,6 +44,9 @@ function clickevent2() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "block";
   imageChange3.style.display = "none";
+  textbox1.style.display = "none";
+  textbox2.style.display = "block";
+  textbox3.style.display = "none";
 }
 
 const clicktest3 = document.getElementById('click3');
@@ -54,4 +63,7 @@ function clickevent3() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "none";
   imageChange3.style.display = "block";
+  textbox1.style.display = "none";
+  textbox2.style.display = "none";
+  textbox3.style.display = "block";
 }

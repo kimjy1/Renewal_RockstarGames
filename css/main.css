@@ -143,6 +143,10 @@ article {
     /* border: 1px solid #666; */
 }
 
+article:hover {
+    transform: scale(1.0);
+}
+
 article:nth-of-type(1) {
     background-image: url("../img/newsimg4.jpg");
 }
@@ -155,14 +159,10 @@ article:nth-of-type(3) {
     background-image: url("../img/newsimg3.jpg");
 }
 
-article:hover {
-    transform: scale(1.0);
-}
-
 /* 아티클 내 요소 시작 */
 article time,
-h4,
-p {
+article h4,
+article p {
     font-size: 0.85em;
     margin-left: 240px;
 }
@@ -280,18 +280,19 @@ aside {
 aside .asidetitle {
     width: 200px;
     height: 35px;
-    background-color: orange;
     text-align: center;
 }
 
 aside .asidetitle h1 {
     color: #fff;
+    font-size: 3.0em;
 }
 
 /* 게임소개 컨텐츠 가운데 시작 */
 aside #imagebox {
     width: 500px;
-    height: 350px;
+    height: auto;
+    background-color: cyan;
 }
 
 aside #imagebox img {
@@ -304,22 +305,24 @@ aside #imagebox span {
     height: 150px;
     background-color: crimson;
     margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-aside #imagebox p {
+.asidebold {
+    padding: 10px;
     color: #fff;
-    margin: 0;
-    padding: 0;
     font-weight: bold;
 }
 
-/* aside #imagebox p:not(#imagetext1) {
+aside #imagebox .asidetext {
+    color: #fff;
+    font-size: 0.85em;
+}
+
+#asidewrapbox3 p:nth-of-type(3) {
     display: none;
-} */
+}
+
 /* 게임소개 컨텐츠 가운데 끝 */
 
 /* 게임소개 컨텐츠 오른쪽 시작 */
