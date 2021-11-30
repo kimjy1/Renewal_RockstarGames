@@ -289,21 +289,21 @@ aside .asidetitle h1 {
 }
 
 /* 게임소개 컨텐츠 가운데 시작 */
-aside .imagebox {
+aside #imagebox {
     width: 500px;
     height: 350px;
 }
 
-aside .imagebox img {
+aside #imagebox img {
     width: 100%;
     height: auto;
 }
 
-aside .imagebox img:not(#img1) {
+aside #imagebox img:not(#img1) {
     display: none;
 }
 
-aside .imagebox span {
+aside #imagebox span {
     width: 500px;
     height: 150px;
     background-color: crimson;
@@ -314,14 +314,14 @@ aside .imagebox span {
     align-items: center;
 }
 
-aside .imagebox p {
+aside #imagebox p {
     color: #fff;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     font-weight: bold;
 }
 
-/* aside .imagebox p:not(#imagetext1) {
+/* aside #imagebox p:not(#imagetext1) {
     display: none;
 } */
 /* 게임소개 컨텐츠 가운데 끝 */
