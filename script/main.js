@@ -1,11 +1,14 @@
+// 로고 클릭 시 웹 브라우저 새로고침
 document.querySelector('.home').onclick = function () {
   location.reload();
 }
 
+// 웹 브라우저 시작 시 함수 실행
 window.onload = function () {
   clickevent1();
 }
 
+// 게임소개 컨텐츠 중 가운데 스크립트 시작
 const container = document.getElementById('image3dbones');
 const clicktest1 = document.getElementById('click1');
 const imageChange1 = document.getElementById('img1');
@@ -67,3 +70,5 @@ function clickevent3() {
   textbox2.style.display = "none";
   textbox3.style.display = "block";
 }
+// 게임소개 컨텐츠 중 가운데 스크립트 시작
+
