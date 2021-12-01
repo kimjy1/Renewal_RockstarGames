@@ -70,5 +70,4 @@ function clickevent3() {
   textbox2.style.display = "none";
   textbox3.style.display = "block";
 }
-// 게임소개 컨텐츠 중 가운데 스크립트 시작
-
+// 게임소개 컨텐츠 중 가운데 스크립트 끝
