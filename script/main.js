@@ -58,8 +58,10 @@ function clickevent2() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "block";
   imageChange3.style.display = "none";
+  moveUp.style.opacity = "1";
   moveUp.style.transform = "translateY(0px)";
   moveUp.style.transition = "all .5s ease-in-out";
+  moveDown.style.opacity = "1";
   moveDown.style.transform = "translateY(0px)";
   moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "none";
@@ -80,8 +82,10 @@ function clickevent3() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "none";
   imageChange3.style.display = "block";
+  moveUp.style.opacity = "1";
   moveUp.style.transform = "translateY(0px)";
   moveUp.style.transition = "all .5s ease-in-out";
+  moveDown.style.opacity = "1";
   moveDown.style.transform = "translateY(0px)";
   moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "none";
