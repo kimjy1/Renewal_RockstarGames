@@ -34,8 +34,10 @@ function clickevent1() {
   imageChange1.style.display = "block";
   imageChange2.style.display = "none";
   imageChange3.style.display = "none";
+  moveUp.style.opacity = "1";
   moveUp.style.transform = "translateY(0px)";
   moveUp.style.transition = "all .5s ease-in-out";
+  moveDown.style.opacity = "1";
   moveDown.style.transform = "translateY(0px)";
   moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "block";
