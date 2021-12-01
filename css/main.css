@@ -7,7 +7,7 @@
 }
 
 /* 마우스 오버 시 포인터로 변환 */
-:is(.snsbox img, #image3d div img, #explainbtn):hover {
+:is(.snsbox img, #image3d div img):hover {
     cursor: pointer;
 }
 
@@ -306,19 +306,27 @@ aside #imagebox span {
     height: auto;
     margin: 0 auto;
     text-align: center;
+    display: none;
+    /* overflow: hidden; */
 }
 
-.asidebold {
+aside #imagebox #asidebold {
     padding: 10px;
     color: #fff;
     font-weight: bold;
     font-size: 1.3em;
+    /* transform: translateY(-50px);
+    transition: all .5s ease-in-out; */
 }
 
-aside #imagebox .asidetext {
+aside #imagebox #asidetext {
     color: #fff;
     font-size: 1.05em;
+    /* transform: translateY(70px);
+    transition: all .5s ease-in-out; */
 }
+
+
 /* 게임소개 컨텐츠 가운데 끝 */
 
 /* 게임소개 컨텐츠 오른쪽 시작 */
