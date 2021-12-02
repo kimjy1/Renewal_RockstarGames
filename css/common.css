@@ -13,7 +13,6 @@ header ul li:hover::after {
     background-color: #ff9900;
     color: #000;
 }
-
 /* 헤더 - 마우스오버 효과 끝 */
 
 /* 마우스 오버 시 포인트로 변환 (헤더, 풋터) */
@@ -49,8 +48,8 @@ header {
 
 /* 헤더 - 로고 이미지 */
 #logo img {
-    width: 90px;
-    height: 60px;
+    width: 100%;
+    height: auto;
 }
 
 /* 헤더 - 네비게이션 */

@@ -11,23 +11,25 @@
     cursor: pointer;
 }
 
-/* 반응형
-@media all and (max-width:479px) {
+/* 반응형 */
+/* @media all and (max-width:479px) {
     header {
+        width: 100%;
+        height: 150px;
         display: flex;
+        background-color: tomato;
     }
 
     .headertitle {
         display: flex;
     }
 
-    nav ul {
+    header ul {
         display: none;
     }
 
-    nav ul li {
+    header ul li {
         display: block;
-        line-height: 40px;
     }
 
     #slider video {
@@ -50,28 +52,39 @@
         width: 100%;
         height: 100%;
     }
-}
+} */
 
 @media all and (min-width:480px) and (max-width:767px) {
     header {
+        width: 100%;
+        height: 70px;
+        background-color: tomato;
+        position: sticky;
+        top: 0;
+        z-index: 5;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    #logo{
+        width: 70px;
+        height: auto;
     }
 
     .headertitle {
-        display: flex;
+        display: block;
     }
 
     nav {
         display: none;
     }
 
-    nav ul {
+    header ul {
         display: none;
     }
 
-    nav ul li {
+    header ul li {
         display: block;
         line-height: 40px;
     }
@@ -85,11 +98,9 @@
     .loginbox {
         display: none;
     }
-
-    
 }
 
-@media all and (min-width:768px) and (max-width:1023px) {
+/* @media all and (min-width:768px) and (max-width:1023px) {
     header {
         display: flex;
     }
@@ -108,8 +119,8 @@
     #slider video {
         max-width: 1023px;
     }
-}
-*/
+}*/
+
 @media all and (min-width:1024px) and (max-width:1920px) {
     header {
         display: flex;
@@ -118,7 +129,7 @@
     #slider video {
         max-width: 1920px;
     }
-}
+} 
 
 /* 섹션 */
 section {
