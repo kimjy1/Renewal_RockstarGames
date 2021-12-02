@@ -14,8 +14,6 @@ const textbox3 = document.getElementById('asidewrapbox3');
 const imageChange1 = document.getElementById('img1');
 const imageChange2 = document.getElementById('img2');
 const imageChange3 = document.getElementById('img3');
-const moveUp = document.getElementById('asidebold');
-const moveDown = document.getElementById('asidetext');
 
 // 웹 브라우저 시작 시 클릭 이벤트 함수 실행
 window.onload = function () {
@@ -34,12 +32,6 @@ function clickevent1() {
   imageChange1.style.display = "block";
   imageChange2.style.display = "none";
   imageChange3.style.display = "none";
-  moveUp.style.opacity = "1";
-  moveUp.style.transform = "translateY(0px)";
-  moveUp.style.transition = "all .5s ease-in-out";
-  moveDown.style.opacity = "1";
-  moveDown.style.transform = "translateY(0px)";
-  moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "block";
   textbox2.style.display = "none";
   textbox3.style.display = "none";
@@ -58,12 +50,6 @@ function clickevent2() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "block";
   imageChange3.style.display = "none";
-  moveUp.style.opacity = "1";
-  moveUp.style.transform = "translateY(0px)";
-  moveUp.style.transition = "all .5s ease-in-out";
-  moveDown.style.opacity = "1";
-  moveDown.style.transform = "translateY(0px)";
-  moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "none";
   textbox2.style.display = "block";
   textbox3.style.display = "none";
@@ -82,12 +68,6 @@ function clickevent3() {
   imageChange1.style.display = "none";
   imageChange2.style.display = "none";
   imageChange3.style.display = "block";
-  moveUp.style.opacity = "1";
-  moveUp.style.transform = "translateY(0px)";
-  moveUp.style.transition = "all .5s ease-in-out";
-  moveDown.style.opacity = "1";
-  moveDown.style.transform = "translateY(0px)";
-  moveDown.style.transition = "all .5s ease-in-out";
   textbox1.style.display = "none";
   textbox2.style.display = "none";
   textbox3.style.display = "block";

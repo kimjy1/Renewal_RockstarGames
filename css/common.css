@@ -1,4 +1,27 @@
 @charset "UTF-8";
+
+/* 헤더 - 마우스오버 효과 시작 */
+:is(.login, .home, .mobile, .laptop):hover {
+    cursor: url(../img/cursor.cur), auto;
+}
+
+header ul li:hover::after {
+    width: 100%;
+}
+
+.login:hover {
+    background-color: #ff9900;
+    color: #000;
+}
+
+/* 헤더 - 마우스오버 효과 끝 */
+
+/* 마우스 오버 시 포인트로 변환 (헤더, 풋터) */
+:is(header ul li, #foottop li, #footerlogo, .footerinfo ol li, .iconbox img, .mobile):hover {
+    cursor: pointer;
+}
+
+/* 바디 */
 #wrap {
     width: 100%;
     height: auto;
@@ -19,7 +42,6 @@ header {
 #logo {
     width: 90px;
     height: 60px;
-    background-color: black;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -82,29 +104,89 @@ header ul li::after {
     background-color: #ff9900;
 }
 
-/* 헤더 - 마우스오버 효과 시작 */
-:is(.login, .home, .mobile, .laptop):hover {
-    cursor: url(../img/cursor.cur), auto;
-}
-
-header ul li:hover {
-    cursor: pointer;
-}
-
-header ul li:hover::after {
+/* 풋터 시작 */
+footer {
     width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    color: #fff;
+    font-size: 0.9em;
 }
 
-.login:hover {
-    background-color: #ff9900;
-    color: #000;
+footer .footerbox {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 
-.mobile:hover {
-    cursor: pointer;
+.footerbox #foottop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 50px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
 }
-/* 헤더 - 마우스오버 효과 끝 */
 
+#footerlogo {
+    width: 110px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.footerinfo {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.footerinfo ol {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconbox {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footerinfo img {
+    width: 24px;
+    height: 24px;
+}
+
+#companyinfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#companyinfo #footerglobal {
+    width: 33%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+/* 풋터 끝 */
 
 /* 반응형 -  헤더 로고 */
 .headertitle {

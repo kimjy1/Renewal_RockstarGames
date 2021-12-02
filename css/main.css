@@ -306,7 +306,7 @@ aside #imagebox span {
     height: auto;
     margin: 0 auto;
     text-align: center;
-    display: none;
+    /* display: none; */
     /* overflow: hidden; */
 }
 
