@@ -122,6 +122,11 @@
     .cardnews p,
     .cardnews time {
         width: 100%;
+        margin-left: 30px;
+    }
+
+    .cardnews time {
+        margin-top: 380px;
     }
 }
 
