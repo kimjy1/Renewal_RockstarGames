@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,15 @@
         <img src="img/logo.png" alt="" class="home">
       </div>
 
-      <ul>
+      <div class="headertitle">
+        <h3>Rockstar Games</h3>
+      </div>
+
+      <div class="mobile">
+        <img src="img/menu1.png" alt="">
+      </div>
+
+      <ul id="headernav">
         <li>뉴스와이어</li>
         <li>게임</li>
         <li>동영상</li>
@@ -35,22 +44,13 @@
         <li>Store</li>
       </ul>
 
-      <div class="headertitle">
-        <h3>Rockstar Games</h3>
-      </div>
-
-
       <div class="loginbox">
         <span class="login">로그인</span>
         <span class="login signup">회원가입</span>
       </div>
 
-      <div class="mobile">
-        <img src="img/menu1.png" alt="">
-      </div>
-
       <div class="laptop">
-        <img src="img/menu3.png" alt="">
+        <span id="laptopmenu">Menu</span>
       </div>
     </header>
 
@@ -60,25 +60,22 @@
     </div>
 
     <!-- 비디오 슬라이드 밑 뉴스 와이드 -->
-    <section>
+    <section id="newswide">
 
-      <article>
-        <!-- <img src="img/newsimg2.jpg" alt=""> -->
+      <article class="cardnews">
         <time>2021년 11월 25일</time>
         <h4>GTA 온라인</h4>
         <p>카요 페리코를 향하는 팬서 조각상</p>
 
       </article>
 
-      <article>
-        <!-- <img src="img/newsimg1.jpg" alt=""> -->
+      <article class="cardnews">
         <time>2021년 11월 23일</time>
         <h4>Red Dead 온라인</h4>
         <p>하드코어 전보 임무와 <br>전투 준비에서 <br>50% 보너스 RDO 달러</p>
       </article>
 
-      <article>
-        <!-- <img src="img/newsimg3.jpg" alt=""> -->
+      <article class="cardnews">
         <time>2021년 11월 18일</time>
         <h4>GTA 온라인</h4>
         <p>다이아몬드 카지노 & 리조트에서<br> 보상 두 배</p>
@@ -201,6 +198,7 @@
   </div>
 
   <script type="text/javascript" src="script/main.js" defer></script>
+
 </body>
 
 </html>

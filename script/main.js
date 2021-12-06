@@ -3,6 +3,18 @@ document.querySelector('.home').onclick = function () {
   location.reload();
 }
 
+$(window).resize(function () {
+  if (window.innerWidth >= 768) {
+    $("#headernav").show();
+  }
+});
+
+$(function () {
+  $(".mobile").click(function () {
+    $("#headernav").slideToggle(300);
+  });
+});
+
 // 게임소개 컨텐츠 중 가운데 스크립트 시작
 const container = document.getElementById('image3dbones');
 const clicktest1 = document.getElementById('click1');
