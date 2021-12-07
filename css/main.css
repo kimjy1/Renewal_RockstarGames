@@ -130,8 +130,7 @@
     }
 }
 
-@media all and (min-width:480px) and (max-width:767px) {
-    /* 헤더 시작 */
+/* @media all and (min-width:480px) and (max-width:767px) {
     header {
         display: flex;
         flex-flow: row wrap;
@@ -181,7 +180,6 @@
     .loginbox {
         display: none;
     }
-    /* 헤더 끝 */
 
     #newswide {
         height: auto;
@@ -204,7 +202,7 @@
     .cardnews time {
         margin-top: 85%;
     }
-}
+} */
 
 /* @media all and (min-width:768px) and (max-width:1023px) {
     header {
