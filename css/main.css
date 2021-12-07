@@ -54,7 +54,7 @@
     }
 } */
 
-@media all and (max-width:479px) {
+@media all and (max-width:380px) {
     /* 헤더 시작 */
     header {
         display: flex;
