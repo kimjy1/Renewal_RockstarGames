@@ -6,7 +6,7 @@ document.querySelector('.home').onclick = function () {
 $(window).resize(function () {
   if (window.innerWidth >= 768) {
     $("#headernav").show();
-  }
+  };
 });
 
 $(function () {

@@ -54,6 +54,82 @@
     }
 } */
 
+@media all and (max-width:479px) {
+    /* 헤더 시작 */
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        width: 70px;
+        height: auto;
+    }
+
+    .headertitle {
+        display: block;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header ul {
+        display: none;
+        width: 150px;
+        height: auto;
+        position: fixed;
+        top: 75px;
+        right: 0;
+        margin: 0;
+        background-color: #000;
+    }
+
+    header ul li {
+        display: block;
+        line-height: 40px;
+    }
+
+    #slider video {
+        width: 100%;
+        max-width: 767px;
+        height: auto;
+    }
+
+    .loginbox {
+        display: none;
+    }
+    /* 헤더 끝 */
+
+    #newswide {
+        height: auto;
+    }
+
+    .cardnews {
+        width: 100%;
+        height: 450px;
+        max-height: 600px;
+        margin: 0 16%;
+        padding-bottom: 10%;
+    }
+    .cardnews h4,
+    .cardnews p,
+    .cardnews time {
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    .cardnews time {
+        margin-top: 85%;
+    }
+}
+
 @media all and (min-width:480px) and (max-width:767px) {
     /* 헤더 시작 */
     header {
@@ -113,20 +189,20 @@
 
     .cardnews {
         width: 100%;
-        height: 500px;
+        height: 450px;
         max-height: 600px;
         margin: 0 16%;
-        padding: 15% 0;
+        padding-bottom: 10%;
     }
     .cardnews h4,
     .cardnews p,
     .cardnews time {
         width: 100%;
-        margin-left: 30px;
+        margin-left: 5%;
     }
 
     .cardnews time {
-        margin-top: 380px;
+        margin-top: 85%;
     }
 }
 
