@@ -70,6 +70,7 @@
 
     .headertitle {
         display: block;
+        margin-right: 10%;
     }
 
     .mobile {
@@ -113,20 +114,67 @@
 
     .cardnews {
         width: 100%;
-        height: 450px;
+        height: 400px;
         max-height: 600px;
-        margin: 0 16%;
+        margin: 5% 16%;
         padding-bottom: 10%;
     }
     .cardnews h4,
     .cardnews p,
     .cardnews time {
-        width: 100%;
         margin-left: 5%;
     }
 
     .cardnews time {
-        margin-top: 85%;
+        margin-top: 100%;
+    }
+
+    .cardnews:nth-of-type(3) {
+        padding: 0;
+    }
+
+    section a {
+        margin: -12%;
+    }
+
+    main {
+        max-width: 480px;
+        padding-top: 10%;
+    }
+
+    .social {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: 480px;
+    }
+
+    #snsbox {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #snsbox h2 {
+        width: 100%;
+        height: 50px;
+        margin-left: 15%;
+    }
+
+    .social h2::after {
+        display: none;
+    }
+
+    #snsbox img:nth-of-type(2) {
+        margin-right: 20%;
+    }
+
+    #featured {
+        flex-flow: column wrap;
+    }
+
+    #featured #imagebox {
+        width: 100%;
     }
 }
 
@@ -354,11 +402,11 @@ main img:hover {
     align-items: center;
 }
 
-.snsbox {
+.social div {
     display: flex;
     justify-content: center;
     width: 80%;
-    height: 50px;
+    height: auto;
     background-color: #fff;
     clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
 }
@@ -416,12 +464,10 @@ aside #imagebox img {
 
 /* 게임 제목 및 설명 */
 aside #imagebox span {
-    width: 500px;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     text-align: center;
-    /* display: none; */
-    /* overflow: hidden; */
 }
 
 aside #imagebox #asidebold {

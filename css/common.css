@@ -30,8 +30,7 @@ header ul li:hover::after {
 /* 헤더 */
 header {
     width: 100%;
-    height: auto;
-    max-height: 80px;
+    height: 80px;
     background-color: #000;
     position: sticky;
     top: 0;
