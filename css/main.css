@@ -176,6 +176,12 @@
     #featured #imagebox {
         width: 100%;
     }
+
+    /* #featured #image3d {
+        flex-flow: column wrap;
+        width: 380px;
+        height: 250px;
+    } */
 }
 
 /* @media all and (min-width:480px) and (max-width:767px) {
@@ -494,7 +500,7 @@ aside #image3d {
 }
 
 aside #image3dbones {
-    width: 200px;
+    width: 100%;
     height: 700px;
     display: flex;
     flex-flow: row wrap;
