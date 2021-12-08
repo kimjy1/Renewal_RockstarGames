@@ -12,16 +12,12 @@ $(function () {
 $(window).resize(function () {
   if (window.innerWidth >= 768) {
     $("#headernav").show();
-  };
+  }
 });
 
 // if (window.matchMedia("(max-width: 380px)").matches) { 
 //   clicktest1.removeEventListener(clickevent1);
 // }
-
-if (window.matchMedia("(max-width: 380px)").matches) {
-  document.getElementsByTagName("p")[6].innerText = "";
-}
 
 // 게임소개 컨텐츠 중 가운데 스크립트 시작
 const container = document.getElementById('image3dbones');

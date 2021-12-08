@@ -171,17 +171,75 @@
 
     #featured {
         flex-flow: column wrap;
+        min-height: 530px;
+        justify-content: flex-start;
+        margin-bottom: 25%;
     }
 
-    #featured #imagebox {
-        width: 100%;
+    #featured #image3d {
+        max-width: 380px;
+        min-height: 150px;
     }
 
-    /* #featured #image3d {
+    #featured #image3dbones {
+        max-width: 380px;
+        min-height: 250px;
+    }
+
+    #featured #image3dbones div {
+        max-width: 100px;
+    }
+    /* 모바일(320px) 관련게임 끝 */
+
+    /* 풋터 시작 */
+    footer {
+        max-width: 380px;
+        min-height: 400px;
+    }
+
+    footer .footerbox {
+        max-width: 380px;
+        min-height: 400px;
+    }
+
+    footer .footerbox #foottop {
+        margin-bottom: 10%;
+    }
+
+    footer #footerlogo {
+        margin: 10% 0;
+    }
+
+    footer .footerbox {
+        min-width: 380px;
         flex-flow: column wrap;
-        width: 380px;
-        height: 250px;
-    } */
+        align-content: normal;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .footerinfo {
+        min-height: 220px;
+        flex-flow: column-reverse nowrap;
+        margin-bottom: 0;
+    }
+
+    footer .footerinfo .iconbox {
+        width: 100%;
+        max-height: 20px;
+        margin-bottom: 10%;
+    }
+
+    footer .footerinfo ol {
+        width: 100%;
+        min-height: 150px;
+        flex-flow: column wrap;
+        margin-bottom: 10%;
+    }
+
+    footer .footerbox #companyinfo {
+        margin-bottom: 10%;
+    }
 }
 
 /* @media all and (min-width:480px) and (max-width:767px) {
@@ -287,6 +345,7 @@
     #slider video {
         max-width: 1920px;
     }
+
 }
 
 /* 섹션 */
@@ -438,7 +497,8 @@ main img:hover {
 /* SNS 메뉴바 밑 게임소개 컨텐츠 */
 aside {
     width: 100%;
-    height: 700px;
+    height: auto;
+    max-height: 700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -447,8 +507,10 @@ aside {
 
 /* 게임소개 컨텐츠 왼쪽에서 첫번째 */
 aside .asidetitle {
-    width: 200px;
-    height: 35px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 70px;
     text-align: center;
 }
 
@@ -459,7 +521,8 @@ aside .asidetitle h1 {
 
 /* 게임소개 컨텐츠 가운데 시작 */
 aside #imagebox {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
@@ -492,8 +555,9 @@ aside #imagebox #asidetext {
 
 /* 게임소개 컨텐츠 오른쪽 시작 */
 aside #image3d {
-    width: 200px;
-    height: 500px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -501,7 +565,9 @@ aside #image3d {
 
 aside #image3dbones {
     width: 100%;
-    height: 700px;
+    max-width: 700px;
+    height: auto;
+    min-height: 700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -511,8 +577,9 @@ aside #image3dbones {
 }
 
 aside #image3dbones div {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
 }
 
 aside #image3dbones div img {
