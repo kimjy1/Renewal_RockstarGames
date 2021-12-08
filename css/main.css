@@ -203,11 +203,11 @@
     }
 
     footer .footerbox #foottop {
-        margin-bottom: 10%;
+        margin-bottom: 15%;
     }
 
     footer #footerlogo {
-        margin: 10% 0;
+        margin-bottom: 20%;
     }
 
     footer .footerbox {
@@ -219,7 +219,7 @@
     }
 
     footer .footerinfo {
-        min-height: 220px;
+        min-height: 250px;
         flex-flow: column-reverse nowrap;
         margin-bottom: 0;
     }
@@ -227,7 +227,7 @@
     footer .footerinfo .iconbox {
         width: 100%;
         max-height: 20px;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
     }
 
     footer .footerinfo ol {
