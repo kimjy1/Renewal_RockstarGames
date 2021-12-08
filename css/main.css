@@ -169,11 +169,16 @@
         margin-right: 20%;
     }
 
+    /* 모바일(320px) 게임소개 컨텐츠 시작 */
     #featured {
         flex-flow: column wrap;
         min-height: 530px;
         justify-content: flex-start;
         margin-bottom: 25%;
+    }
+
+    #featured .asidetitle {
+        margin-bottom: 5%;
     }
 
     #featured #image3d {
@@ -183,13 +188,14 @@
 
     #featured #image3dbones {
         max-width: 380px;
-        min-height: 250px;
+        min-height: 150px;
+        margin-top: 0;
     }
 
     #featured #image3dbones div {
         max-width: 100px;
     }
-    /* 모바일(320px) 관련게임 끝 */
+    /* 모바일(320px) 게임소개 컨텐츠 끝 */
 
     /* 풋터 시작 */
     footer {
@@ -498,11 +504,12 @@ main img:hover {
 aside {
     width: 100%;
     height: auto;
-    max-height: 700px;
+    max-height: 530px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 10%;
 }
 
 /* 게임소개 컨텐츠 왼쪽에서 첫번째 */
@@ -571,9 +578,9 @@ aside #image3dbones {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-content: flex-end;
+    align-content: center;
     gap: 20px 0;
-    margin-top: -100px;
+    /* margin-top: -100px; */
 }
 
 aside #image3dbones div {
