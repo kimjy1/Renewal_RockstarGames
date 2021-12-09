@@ -7,7 +7,7 @@
 }
 
 /* 마우스 오버 시 포인터로 변환 */
-:is(.snsbox img, #image3d div img):hover {
+:is(.snsbox img, #image3d div img, section a, .social img):hover {
     cursor: pointer;
 }
 
@@ -55,7 +55,7 @@
 } */
 
 @media all and (max-width:380px) {
-    /* 헤더 시작 */
+    /* 모바일(380px) 헤더 시작 */
     header {
         display: flex;
         flex-flow: row wrap;
@@ -64,17 +64,18 @@
     }
 
     #logo {
-        width: 70px;
-        height: auto;
+        max-width: 70px;
+        max-height: 50px;
     }
 
     .headertitle {
         display: block;
-        margin-right: 10%;
     }
 
     .mobile {
         display: block;
+        max-width: 48px;
+        min-height: 48px;
     }
 
     nav {
@@ -95,19 +96,22 @@
     header ul li {
         display: block;
         line-height: 40px;
-    }
-
-    #slider video {
-        width: 100%;
-        max-width: 767px;
-        height: auto;
+        background-color: #000;
     }
 
     .loginbox {
         display: none;
     }
-    /* 헤더 끝 */
+    /* 모바일(380px) 헤더 끝 */
 
+    /* 모바일(380px) 헤더 밑 비디오  */
+    #slider video {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+
+    /* 모바일(380px) 비디오 슬라이드 밑 뉴스 와이드 */
     #newswide {
         height: auto;
     }
@@ -354,23 +358,25 @@
 
 }
 
-/* 섹션 */
+/* 비디오 슬라이드 밑 뉴스 와이드 */
 section {
     width: 100%;
     max-width: 1920px;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     position: relative;
-    margin: 50px 0;
+    margin: 5% 0;
 }
 
-/* 아티클 */
+/* 뉴스 와이드 아티클 */
 article {
-    width: 25%;
-    height: 200px;
-    max-height: 200px;
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    max-height: 220px;
     background-repeat: no-repeat;
     background-size: contain;
     transform: scale(1.1);
@@ -392,59 +398,64 @@ article:nth-of-type(3) {
 article:hover {
     transform: scale(1.0);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-/* 아티클 내 요소 시작 */
+/* 뉴스 와이드 텍스트 */
 article h4,
 article p,
 article time {
     font-size: 0.85em;
-    margin-left: 240px;
+    margin-left: 50%;
+    line-height: 40px;
+    color: #fff;
 }
 
 article time {
     display: block;
     color: #bcbcbc;
-    line-height: 40px;
 }
 
 article h4 {
-    width: 220px;
-    color: #fff;
-    line-height: 40px;
+    width: 100%;
+    max-width: 220px;
 }
 
 article p {
-    color: #fff;
+    line-height: normal;
 }
 
+/* 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 */
 section a {
     position: absolute;
-    right: 120px;
-    bottom: 0;
+    top: 250px;
+    right: 70px;
     color: #fff;
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    min-height: 30px;
 }
 
 section a img {
-    width: 15px;
-    height: 15px;
-}
-
-.more_news {
+    width: 100%;
+    height: auto;
+    max-width: 15px;
     position: absolute;
-    right: -20px;
-    bottom: 5px;
+    top: 5px;
+    right: 15px;
     transition: all 0.3s ease-in-out;
 }
 
 section a:hover .more_news {
-    right: -28px;
+    right: 5px;
 }
-/* 아티클 내 요소 끝 */
+/* 뉴스 와이드 끝 */
 
-/* 메인 이미지 시작*/
+/* 뉴스 와이드 밑 메인 이미지 시작 */
 main {
-    width: 1740px;
+    width: 100%;
+    max-width: 1740px;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -463,10 +474,12 @@ main img:hover {
 }
 /* 메인 이미지 끝 */
 
-/* 메인 밑 SNS 메뉴바 시작 */
+/* 메인 이미지 밑 SNS 메뉴바 시작 */
 .social {
-    width: 1780px;
-    height: 250px;
+    width: 100%;
+    max-width: 1780px;
+    height: auto;
+    min-height: 250px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -474,10 +487,12 @@ main img:hover {
 }
 
 .social div {
+    width: 100%;
+    max-width: 1420px;
+    height: auto;
+    min-height: 50px;
     display: flex;
     justify-content: center;
-    width: 80%;
-    height: auto;
     background-color: #fff;
     clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
 }
@@ -494,22 +509,25 @@ main img:hover {
 }
 
 .social img {
-    width: 44px;
-    height: 44px;
-    margin: 4px;
+    width: 100%;
+    height: auto;
+    max-width: 44px;
+    min-height: 44px;
+    margin: 0.4%;
 }
-/* 메인 밑 SNS 메뉴바 끝 */
+/* 메인 이미지 밑 SNS 메뉴바 끝 */
 
 /* SNS 메뉴바 밑 게임소개 컨텐츠 */
 aside {
     width: 100%;
     height: auto;
-    max-height: 530px;
+    max-width: 1920px;
+    max-height: 700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 /* 게임소개 컨텐츠 왼쪽에서 첫번째 */
@@ -565,6 +583,7 @@ aside #image3d {
     width: 100%;
     max-width: 200px;
     height: auto;
+    max-height: 500px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -572,15 +591,14 @@ aside #image3d {
 
 aside #image3dbones {
     width: 100%;
-    max-width: 700px;
+    max-width: 200px;
     height: auto;
-    min-height: 700px;
+    max-height: 700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
     gap: 20px 0;
-    /* margin-top: -100px; */
 }
 
 aside #image3dbones div {

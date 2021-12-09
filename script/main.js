@@ -5,7 +5,7 @@ document.querySelector('.home').onclick = function () {
 
 $(function () {
   $(".mobile").click(function () {
-    $("#headernav").slideToggle(300);
+    $("#headernav").slideToggle("slow");
   });
 });
 
@@ -96,7 +96,7 @@ window.onload = function () {
 if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
   clicktest1.addEventListener("click", clickevent1);
   function clickevent1() {
-    container.style.transform = "translateY(0px)";
+    container.style.transform = "translateY(100px)";
     // container.style.transform = "translateX(100px)";
     container.style.transition = "all .9s ease";
     clicktest1.style.transform = "scale(1.2)";
@@ -115,7 +115,7 @@ if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
 
   clicktest2.addEventListener("click", clickevent2);
   function clickevent2() {
-    container.style.transform = "translateY(-100px)";
+    container.style.transform = "translateY(0px)";
     // container.style.transform = "translateX(0px)";
     container.style.transition = "all .9s ease";
     clicktest1.style.transform = "scale(0.8)";
@@ -134,7 +134,7 @@ if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
 
   clicktest3.addEventListener("click", clickevent3);
   function clickevent3() {
-    container.style.transform = "translateY(-200px)";
+    container.style.transform = "translateY(-100px)";
     // container.style.transform = "translateX(-100px)";
     container.style.transition = "all .9s ease";
     clicktest1.style.transform = "scale(0.8)";
