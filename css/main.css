@@ -1,15 +1,80 @@
 @charset "UTF-8";
 
-/* 슬라이더 비디오 */
+/* 메인 - 마우스 오버 시 포인터로 변환 */
+:is(article, main img, .snsbox img, #image3d div img, section a, .social img)
+:hover {
+    cursor: pointer;
+}
+
+/* 비디오 슬라이드 기본 설정*/
 #slider video {
     width: 100%;
     height: auto;
 }
 
-/* 마우스 오버 시 포인터로 변환 */
-:is(.snsbox img, #image3d div img, section a, .social img):hover {
-    cursor: pointer;
+/* 비디오 슬라이드 밑 뉴스 와이드 기본 설정 */
+section {
+    width: 100%;
+    height: auto;
 }
+
+/* 뉴스 와이드 아티클 기본 설정 */
+article {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 뉴스 와이드 아티클 배경 이미지 */
+article:nth-of-type(1) {
+    background-image: url("../img/newsimg4.jpg");
+}
+
+article:nth-of-type(2) {
+    background-image: url("../img/newsimg1.jpg");
+}
+
+article:nth-of-type(3) {
+    background-image: url("../img/newsimg3.jpg");
+}
+
+/* 뉴스 와이드 텍스트 기본 설정 */
+article h4,
+article p,
+article time {
+    font-size: 0.85em;
+    color: #fff;
+}
+
+article time {
+    display: block;
+    color: #bcbcbc;
+}
+
+/* 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 기본 설정 */
+section a {
+    color: #fff;
+    width: 100%;
+    height: auto;
+}
+
+section a img {
+    width: 100%;
+    height: auto;
+}
+
+.social {
+    width: 100%;
+    max-width: 1780px;
+    height: auto;
+    min-height: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* 반응형 */
 /* @media all and (max-width:479px) {
@@ -57,7 +122,6 @@
 @media all and (max-width:380px) {
     /* 모바일(380px) 헤더 시작 */
     header {
-        display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
@@ -138,7 +202,7 @@
     }
 
     section a {
-        margin: -12%;
+        top: 0;
     }
 
     main {
@@ -348,266 +412,240 @@
 }*/
 
 @media all and (min-width:1024px) and (max-width:1920px) {
+    /* 반응형 - PC(1920px) 시작 */
     header {
-        display: flex;
+        max-width: 1920px;
+        max-height: 80px;
     }
 
+    /* 반응형 - PC(1920px) 헤더 로고 */
+    #logo {
+        max-width: 90px;
+        min-height: 60px;
+        margin: 0.5%;
+        display: inline-block;
+    }
+
+    /* 반응형 - PC(1920px) 슬라이더 비디오 */
     #slider video {
         max-width: 1920px;
     }
 
-}
+    /* 반응형 - PC(1920px) 비디오 슬라이드 밑 뉴스 와이드 */
+    section {
+        max-width: 1920px;
+        min-height: 250px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        position: relative;
+        margin: 5% 0;
+    }
 
-/* 비디오 슬라이드 밑 뉴스 와이드 */
-section {
-    width: 100%;
-    max-width: 1920px;
-    height: auto;
-    min-height: 250px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    position: relative;
-    margin: 5% 0;
-}
+    /* 반응형 - PC(1920px) 뉴스 와이드 아티클 */
+    article {
+        max-width: 480px;
+        max-height: 220px;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
 
-/* 뉴스 와이드 아티클 */
-article {
-    width: 100%;
-    height: auto;
-    max-width: 480px;
-    max-height: 220px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-}
+    article:hover {
+        transform: scale(1.0);
+        transition: all 0.3s ease-in-out;
+    }
 
-article:nth-of-type(1) {
-    background-image: url("../img/newsimg4.jpg");
-}
+    /* 반응형 - PC(1920px) 뉴스 와이드 텍스트 */
+    article h4,
+    article p,
+    article time {
+        margin-left: 50%;
+        line-height: 40px;
+    }
 
-article:nth-of-type(2) {
-    background-image: url("../img/newsimg1.jpg");
-}
+    article p {
+        line-height: normal;
+    }
 
-article:nth-of-type(3) {
-    background-image: url("../img/newsimg3.jpg");
-}
+    /* 반응형 - PC(1920px) 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 */
+    section a {
+        position: absolute;
+        top: 250px;
+        right: 70px;
+        max-width: 100px;
+        min-height: 30px;
+    }
 
-article:hover {
-    transform: scale(1.0);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
+    section a img {
+        max-width: 15px;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        transition: all 0.3s ease-in-out;
+    }
 
-/* 뉴스 와이드 텍스트 */
-article h4,
-article p,
-article time {
-    font-size: 0.85em;
-    margin-left: 50%;
-    line-height: 40px;
-    color: #fff;
-}
+    section a:hover .more_news {
+        right: 5px;
+    }
+    /* 반응형 - PC(1920px) 뉴스 와이드 끝 */
 
-article time {
-    display: block;
-    color: #bcbcbc;
-}
+    /* 반응형 - PC(1920px) 뉴스 와이드 밑 메인 이미지 시작 */
+    main {
+        width: 100%;
+        max-width: 1740px;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-article h4 {
-    width: 100%;
-    max-width: 220px;
-}
+    main img {
+        width: 100%;
+        height: auto;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
 
-article p {
-    line-height: normal;
-}
+    main img:hover {
+        transform: scale(1.0);
+        /* cursor: pointer; */
+    }
+    /* 반응형 - PC(1920px) 메인 이미지 끝 */
 
-/* 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 */
-section a {
-    position: absolute;
-    top: 250px;
-    right: 70px;
-    color: #fff;
-    width: 100%;
-    height: auto;
-    max-width: 100px;
-    min-height: 30px;
-}
+    /* 반응형 - PC(1920px) 메인 이미지 밑 SNS 메뉴바 시작 */
+    .social {
+        width: 100%;
+        max-width: 1780px;
+        height: auto;
+        min-height: 250px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-section a img {
-    width: 100%;
-    height: auto;
-    max-width: 15px;
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    transition: all 0.3s ease-in-out;
-}
+    .social div {
+        width: 100%;
+        max-width: 1420px;
+        height: auto;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
+    }
 
-section a:hover .more_news {
-    right: 5px;
-}
-/* 뉴스 와이드 끝 */
+    .social h2 {
+        display: inline-block;
+        color: #000;
+        line-height: 50px;
+    }
 
-/* 뉴스 와이드 밑 메인 이미지 시작 */
-main {
-    width: 100%;
-    max-width: 1740px;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
-}
+    .social h2::after {
+        content: "ㅣ";
+        margin: 0 20px;
+    }
 
-main img {
-    width: 100%;
-    height: auto;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-}
+    .social img {
+        width: 100%;
+        height: auto;
+        max-width: 44px;
+        min-height: 44px;
+        margin: 0.4%;
+    }
+    /* 반응형 - PC(1920px) 메인 이미지 밑 SNS 메뉴바 끝 */
 
-main img:hover {
-    transform: scale(1.0);
-    cursor: pointer;
-}
-/* 메인 이미지 끝 */
+    /* 반응형 - PC(1920px) SNS 메뉴바 밑 게임소개 컨텐츠 */
+    aside {
+        width: 100%;
+        height: auto;
+        max-width: 1920px;
+        max-height: 700px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 5%;
+    }
 
-/* 메인 이미지 밑 SNS 메뉴바 시작 */
-.social {
-    width: 100%;
-    max-width: 1780px;
-    height: auto;
-    min-height: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 왼쪽에서 첫번째 */
+    aside .asidetitle {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        max-height: 70px;
+        text-align: center;
+    }
 
-.social div {
-    width: 100%;
-    max-width: 1420px;
-    height: auto;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
-}
+    aside .asidetitle h1 {
+        color: #fff;
+        font-size: 3.0em;
+    }
 
-.social h2 {
-    display: inline-block;
-    color: #000;
-    line-height: 50px;
-}
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 시작 */
+    aside #imagebox {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
 
-.social h2::after {
-    content: "ㅣ";
-    margin: 0 20px;
-}
+    aside #imagebox img {
+        width: 100%;
+        height: auto;
+    }
 
-.social img {
-    width: 100%;
-    height: auto;
-    max-width: 44px;
-    min-height: 44px;
-    margin: 0.4%;
-}
-/* 메인 이미지 밑 SNS 메뉴바 끝 */
+    /* 반응형 - PC(1920px) 게임 제목 및 설명 */
+    aside #imagebox span {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-/* SNS 메뉴바 밑 게임소개 컨텐츠 */
-aside {
-    width: 100%;
-    height: auto;
-    max-width: 1920px;
-    max-height: 700px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 5%;
-}
+    aside #imagebox #asidebold {
+        padding: 10px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
 
-/* 게임소개 컨텐츠 왼쪽에서 첫번째 */
-aside .asidetitle {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    max-height: 70px;
-    text-align: center;
-}
+    aside #imagebox #asidetext {
+        color: #fff;
+        font-size: 1.05em;
+    }
 
-aside .asidetitle h1 {
-    color: #fff;
-    font-size: 3.0em;
-}
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 끝 */
 
-/* 게임소개 컨텐츠 가운데 시작 */
-aside #imagebox {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-}
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 오른쪽 시작 */
+    aside #image3d {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        max-height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
 
-aside #imagebox img {
-    width: 100%;
-    height: auto;
-}
+    aside #image3dbones {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        max-height: 700px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 20px 0;
+    }
 
-/* 게임 제목 및 설명 */
-aside #imagebox span {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-}
+    aside #image3dbones div {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
 
-aside #imagebox #asidebold {
-    padding: 10px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.3em;
-}
-
-aside #imagebox #asidetext {
-    color: #fff;
-    font-size: 1.05em;
-}
-
-/* 게임소개 컨텐츠 가운데 끝 */
-
-/* 게임소개 컨텐츠 오른쪽 시작 */
-aside #image3d {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    max-height: 500px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-aside #image3dbones {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    max-height: 700px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 20px 0;
-}
-
-aside #image3dbones div {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-}
-
-aside #image3dbones div img {
-    width: 100%;
-    height: auto;
+    aside #image3dbones div img {
+        width: 100%;
+        height: auto;
+    }
 }
