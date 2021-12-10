@@ -15,9 +15,10 @@
 section {
     width: 100%;
     height: auto;
+    display: flex;
 }
 
-/* 뉴스 와이드 아티클 기본 설정 */
+/* 메인 - 뉴스 와이드 아티클 기본 설정 */
 article {
     width: 100%;
     height: auto;
@@ -25,7 +26,7 @@ article {
     background-size: contain;
 }
 
-/* 뉴스 와이드 아티클 배경 이미지 */
+/* 메인 - 뉴스 와이드 아티클 배경 이미지 */
 article:nth-of-type(1) {
     background-image: url("../img/newsimg4.jpg");
 }
@@ -38,7 +39,7 @@ article:nth-of-type(3) {
     background-image: url("../img/newsimg3.jpg");
 }
 
-/* 뉴스 와이드 텍스트 기본 설정 */
+/* 메인 - 뉴스 와이드 텍스트 기본 설정 */
 article h4,
 article p,
 article time {
@@ -51,19 +52,20 @@ article time {
     color: #bcbcbc;
 }
 
-/* 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 기본 설정 */
+/* 메인 - 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 기본 설정 */
 section a {
-    color: #fff;
     width: 100%;
     height: auto;
+    color: #fff;
 }
 
+/* 메인 - 모두 보기 화살표 기본 설정 */
 section a img {
     width: 100%;
     height: auto;
 }
 
-/* 메인 이미지 기본 설정 */
+/* 메인 - 메인 이미지 기본 설정 */
 main {
     width: 100%;
     height: auto;
@@ -74,37 +76,39 @@ main img {
     height: auto;
 }
 
-/* SNS 메뉴바 기본 설정 */
+/* 메인 - SNS 메뉴바 기본 설정 */
 .social {
     width: 100%;
     height: auto;
     display: flex;
 }
 
-.social div {
+/* 메인 - SNS 메뉴바 속 내용물 기본 설정 */
+.social #snsbox {
     width: 100%;
     height: auto;
     display: flex;
     background-color: #fff;
 }
 
-.social h2 {
-    display: inline-block;
+#snsbox h2 {
     color: #000;
-    line-height: 50px;
 }
 
-.social h2::after {
+#snsbox h2::after {
     content: "ㅣ";
-    margin: 0 20px;
 }
 
-.social img {
+#snsbox img {
     width: 100%;
     height: auto;
-    max-width: 44px;
-    min-height: 44px;
-    margin: 0.4%;
+}
+
+/* 메인 - 게임소개 컨텐츠 기본 설정 */
+aside {
+    width: 100%;
+    height: auto;
+    display: flex;
 }
 
 /* 반응형 */
@@ -202,73 +206,95 @@ main img {
 
     /* 반응형 - 모바일(380px) 헤더 밑 비디오  */
     #slider video {
-        max-width: 380px;
+        min-height: 500px;
     }
 
     /* 반응형 - 모바일(380px) 비디오 슬라이드 밑 뉴스 와이드 */
     section {
-        max-width: 380px;
+        flex-flow: column wrap;
+        max-width: 100%;
+        position: relative;
     }
 
-    .cardnews {
-        width: 100%;
-        height: 400px;
-        max-height: 600px;
-        margin: 5% 16%;
-        padding-bottom: 10%;
+    article {
+        max-width: 100%;
+        min-height: 600px;
     }
-    .cardnews h4,
-    .cardnews p,
-    .cardnews time {
-        margin-left: 5%;
+    /* 반응형 - 모바일(380px) 뉴스 와이드 텍스트 */
+    article h4,
+    article p,
+    article time {
+        text-align: center;
+        font-size: 0.9em;
+        line-height: 40px;
     }
 
     .cardnews time {
         margin-top: 100%;
     }
 
-    .cardnews:nth-of-type(3) {
-        padding: 0;
+    .cardnews p {
+        font-size: 1.3em;
+        line-height: normal;
     }
 
+    /* 반응형 - 모바일(380px) 뉴스 와이드 모두 보기 */
     section a {
-        top: 0;
+        max-width: 85px;
+        max-height: 24px;
+        position: absolute;
+        bottom: 1%;
+        left: 40%;
+        text-align: center;
     }
 
+    /* 반응형 - 모바일(380px) 모두 보기 화살표 */
+    section a img {
+        max-width: 12px;
+        min-height: 12px;
+    }
+    /* 반응형 - 모바일(380px) 뉴스 와이드 끝 */
+
+    /* 반응형 - 모바일(380px) 뉴스 와이드 밑 메인 이미지 */
     main {
-        max-width: 480px;
-        padding-top: 10%;
+        max-width: 380px;
+        padding: 10% 0;
     }
 
+    /* 반응형 - 모바일(380px) 메인 이미지 밑 SNS 메뉴바 */
     .social {
         flex-wrap: nowrap;
         justify-content: space-between;
         max-width: 380px;
+        min-height: 150px;
     }
 
-    #snsbox {
-        width: 100%;
-        height: 100px;
-        display: flex;
+    .social #snsbox {
+        max-height: 90px;
         flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: center;
     }
 
     #snsbox h2 {
         width: 100%;
-        height: 50px;
-        margin-left: 15%;
+        text-align: center;
+        height: 40px;
     }
 
-    .social h2::after {
+    #snsbox h2::after {
         display: none;
     }
 
-    #snsbox img:nth-of-type(2) {
-        margin-right: 20%;
+    #snsbox img {
+        max-width: 36px;
+        min-height: 36px;
+        margin: 0 2%;
     }
+    /* 반응형 - 모바일(380px) 메인 이미지 밑 SNS 메뉴바 */
 
-    /* 모바일(320px) 게임소개 컨텐츠 시작 */
-    #featured {
+    /* 반응형 - 모바일(320px) 메인 이미지 밑 게임소개 컨텐츠 시작 */
+    aside {
         flex-flow: column wrap;
         min-height: 530px;
         justify-content: flex-start;
@@ -503,7 +529,6 @@ main img {
     section {
         max-width: 1920px;
         min-height: 250px;
-        display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         position: relative;
@@ -544,6 +569,7 @@ main img {
         min-height: 30px;
     }
 
+    /* 반응형 - PC(1920px) 모두 보기 화살표 */
     section a img {
         max-width: 15px;
         position: absolute;
@@ -583,27 +609,24 @@ main img {
         align-items: center;
     }
 
-    .social div {
+    .social #snsbox {
         max-width: 1420px;
         min-height: 50px;
         justify-content: center;
         clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
     }
 
-    .social h2 {
-        /* display: inline-block;
-        color: #000; */
+    #snsbox h2 {
+        display: inline-block;
+        color: #000;
         line-height: 50px;
     }
 
-    .social h2::after {
-        content: "ㅣ";
+    #snsbox h2::after {
         margin: 0 20px;
     }
 
-    .social img {
-        width: 100%;
-        height: auto;
+    #snsbox img {
         max-width: 44px;
         min-height: 44px;
         margin: 0.4%;
@@ -612,8 +635,6 @@ main img {
 
     /* 반응형 - PC(1920px) SNS 메뉴바 밑 게임소개 컨텐츠 */
     aside {
-        width: 100%;
-        height: auto;
         max-width: 1920px;
         max-height: 700px;
         display: flex;
