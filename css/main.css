@@ -418,6 +418,7 @@ aside #image3dbones div img {
 
     footer .footerbox {
         max-width: 380px;
+        min-height: 690px;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
@@ -464,7 +465,7 @@ aside #image3dbones div img {
         margin-bottom: 5%;
         font-size: 0.8em;
     }
-    
+
     /* 풋터 - 산하 스튜디오 기본 설정 */
     #companyinfo #affiliate {
         max-width: 100px;

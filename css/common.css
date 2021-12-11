@@ -159,9 +159,6 @@ footer .footerbox {
     width: 100%;
     height: auto;
     display: flex;
-    /* flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center; */
 }
 
 /* 풋터 - 산하 스튜디오 기본 설정 */
@@ -169,8 +166,6 @@ footer .footerbox {
     width: 100%;
     height: auto;
     display: flex;
-    /* flex-flow: row wrap;
-    justify-content: space-around; */
 }
 /* 풋터 - 기본 설정 끝 */
 
