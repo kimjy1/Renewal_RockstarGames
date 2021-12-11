@@ -146,6 +146,29 @@ aside #imagebox #asidebold {
     font-weight: bold;
 }
 
+/* 메인 - 게임소개 컨텐츠 오른쪽 기본 설정 */
+aside #image3d {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+}
+
+aside #image3dbones {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+aside #image3dbones div {
+    width: 100%;
+    height: auto;
+}
+
+aside #image3dbones div img {
+    width: 100%;
+    height: auto;
+}
 /* 반응형 */
 /* @media all and (max-width:479px) {
     header {
@@ -333,8 +356,8 @@ aside #imagebox #asidebold {
         flex-flow: column wrap;
         justify-content: flex-start;
         max-width: 380px;
-        min-height: 1500px;
-        margin-bottom: 25%;
+        min-height: 400px;
+        /* margin-bottom: 25%; */
     }
 
     /* 반응형 - 모바일(380px) 게임소개 컨텐츠 왼쪽에서 첫번째 */
@@ -357,10 +380,6 @@ aside #imagebox #asidebold {
     }
 
     /* 반응형 - 모바일(380px) 가운데 게임 제목 및 설명 */
-    aside #imagebox span {
-        margin: 0 auto;
-        text-align: center;
-    }
 
     aside #imagebox #asidebold {
         line-height: 40px;
@@ -370,20 +389,22 @@ aside #imagebox #asidebold {
         max-width: 80%;
         margin: 0 auto;
     }
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 끝 */
 
-    /* 반응형 - 모바일(380px) 게임소개 컨텐츠 오른쪽 시작 */
-    #featured #image3d {
+    /* 반응형 - PC(1920px) 게임소개 컨텐츠 오른쪽 시작 */
+    aside #image3d {
         max-width: 380px;
-        min-height: 150px;
+        max-height: 150px;
+        margin: 10% 0;
     }
 
-    #featured #image3dbones {
+    aside #image3dbones {
         max-width: 380px;
-        min-height: 150px;
-        margin-top: 0;
+        max-height: 150px;
+        justify-content: space-evenly;
     }
 
-    #featured #image3dbones div {
+    aside #image3dbones div {
         max-width: 100px;
     }
     /* 모바일(320px) 게임소개 컨텐츠 끝 */
@@ -741,26 +762,18 @@ aside #imagebox #asidebold {
     aside #imagebox #asidetext {
         font-size: 1.05em;
     }
-
     /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 끝 */
 
     /* 반응형 - PC(1920px) 게임소개 컨텐츠 오른쪽 시작 */
     aside #image3d {
-        width: 100%;
         max-width: 200px;
-        height: auto;
         max-height: 500px;
-        overflow: hidden;
-        display: flex;
         justify-content: center;
     }
 
     aside #image3dbones {
-        width: 100%;
         max-width: 200px;
-        height: auto;
         max-height: 700px;
-        display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-content: center;
@@ -768,13 +781,6 @@ aside #imagebox #asidebold {
     }
 
     aside #image3dbones div {
-        width: 100%;
         max-width: 150px;
-        height: auto;
-    }
-
-    aside #image3dbones div img {
-        width: 100%;
-        height: auto;
     }
 }
