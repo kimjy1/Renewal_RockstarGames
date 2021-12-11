@@ -471,7 +471,7 @@ aside #image3dbones div img {
         max-width: 100px;
         line-height: 40px;
         flex-flow: column nowrap;
-        align-items: center;
+        margin-left: 7%;
     }
 }
 
