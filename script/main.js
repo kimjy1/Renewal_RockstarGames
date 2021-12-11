@@ -1,9 +1,3 @@
-$(function () {
-  $(".mobile").click(function () {
-    $("#headernav").slideToggle("slow");
-  });
-});
-
 // 화면 조정시 모바일 메뉴 나타남
 $(window).resize(function () {
   if (window.innerWidth >= 768) {
@@ -11,6 +5,11 @@ $(window).resize(function () {
   }
 });
 
+$(function () {
+  $(".mobile").click(function () {
+    $("#headernav").slideToggle("slow");
+  });
+});
 
 // 게임소개 컨텐츠 중 가운데 스크립트 시작
 const container = document.getElementById('image3dbones');
@@ -97,10 +96,14 @@ if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
   removeEventListener(clickevent1, clickevent2, clickevent3);
 }
 
-if (window.matchMedia("(max-width: 380px)").matches) { 
+if (window.matchMedia("(max-width: 380px)").matches) {
   imageChange1.style.display = "block";
   imageChange2.style.display = "none";
   imageChange3.style.display = "none";
-} else { 
+  textbox1.style.display = "block";
+  textbox2.style.display = "none";
+  textbox3.style.display = "none";
+} else {
 
 }
+
