@@ -96,7 +96,7 @@ if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
 }
 
 // 반응형 - 게임소개 컨텐츠 스크립트(모바일)
-if (window.matchMedia("(min-width: 380px)").matches) {
+if (window.matchMedia("(max-width: 380px)").matches) {
   clicktest1.addEventListener("click", mobileEvent1);
   function mobileEvent1() {
     container.style.transform = "translateX(100px)";
