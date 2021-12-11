@@ -62,7 +62,7 @@ header ul li {
     font-size: 0.8em;
 }
 
-/* 반응형 - 모바일(380px) 기본 설정 시작*/
+/* 반응형 - 모바일 기본 설정 시작*/
 .mobile {
     display: none;
     width: 100%;
@@ -82,7 +82,7 @@ header ul li {
     color: #fff;
     font-size: 0.9em;
 }
-/* 반응형 - 모바일(380px) 기본 설정 끝*/
+/* 반응형 - 모바일 기본 설정 끝*/
 
 /* 헤더 - 로그인/회원가입 기본 설정 */
 .loginbox {
@@ -104,9 +104,7 @@ header ul li::after {
 /* 풋터 - 기본 설정 시작 */
 footer {
     width: 100%;
-    max-width: 1920px;
     height: auto;
-    max-height: 400px;
     color: #fff;
     font-size: 0.9em;
 }
@@ -114,92 +112,69 @@ footer {
 footer .footerbox {
     width: 100%;
     height: auto;
-    max-width: 1200px;
-    min-height: 400px;
-    margin: 0 auto;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: flex-start;
 }
 
 .footerbox #foottop {
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0 50px;
-    width: 100%;
-    height: auto;
-    max-height: 40px;
-    margin-bottom: 5%;
 }
 
-/* 풋터 기본 설정 - 로고 */
-#footerlogo {
+/* 풋터 - 로고 기본 설정*/
+.footerbox #footerlogo {
     width: 100%;
     height: auto;
-    max-width: 110px;
-    max-height: 80px;
-    margin-bottom: 5%;
 }
 
-.footerinfo {
+/* 풋터 - 기업정보 & SNS 아이콘 기본 설정 */
+.footerbox .footerinfo {
     width: 100%;
     height: auto;
-    max-height: 50px;
     display: flex;
-    margin-bottom: 5%;
 }
 
-/* 풋터 기본 설정 - 기업정보 */
+/* 풋터 - 기업정보 기본 설정 */
 .footerinfo ol {
-    width: 50%;
-    height: auto;
-    max-height: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* 풋터 기본 설정 - 아이콘 */
-.iconbox {
-    width: 50%;
-    height: auto;
-    max-height: 50px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.footerinfo img {
     width: 100%;
-    max-width: 24px;
     height: auto;
+    display: flex;
+}
+
+/* 풋터 - SNS 아이콘 기본 설정 */
+.footerinfo .iconbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.footerinfo .iconbox img {
+    width: 100%;
+    height: auto;
+    max-width: 24px;
     max-height: 24px;
 }
 
-#companyinfo {
+.footerbox #companyinfo {
     width: 100%;
     height: auto;
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
 }
 
-#companyinfo #footerglobal {
-    width: 33%;
+/* 풋터 - 산하 스튜디오 기본 설정 */
+#companyinfo #affiliate {
+    width: 100%;
     height: auto;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    /* flex-flow: row wrap;
+    justify-content: space-around; */
 }
-/* 풋터 기본 설정 - 끝 */
+/* 풋터 - 기본 설정 끝 */
 
-/* 반응형 - 노트북(1024px) 기본 설정 */
+/* 반응형 - 노트북 기본 설정 */
 .laptop {
     display: none;
     background-image: url("../img/menu3.png");
