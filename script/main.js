@@ -1,78 +1,15 @@
-// 로고 클릭 시 웹 브라우저 새로고침
-document.querySelector('.home').onclick = function () {
-  location.reload();
-}
-
 $(function () {
   $(".mobile").click(function () {
     $("#headernav").slideToggle("slow");
   });
 });
 
+// 화면 조정시 모바일 메뉴 나타남
 $(window).resize(function () {
   if (window.innerWidth >= 768) {
     $("#headernav").show();
   }
 });
-
-// 반응형 모바일 - 게임소개 컨텐츠 중 오른쪽 스크립트
-if (window.matchMedia("(max-width: 380px)").matches) {
-  clicktest1.addEventListener("click", mobileevent1);
-  function mobileevent1() {
-    container.style.transform = "translateX(100px)"
-    container.style.transition = "all .9s ease";
-    clicktest1.style.transform = "scale(1.2)";
-    clicktest1.style.transition = "all .5s ease-in-out";
-    clicktest2.style.transform = "scale(0.8)";
-    clicktest2.style.transition = "all .5s ease-in-out";
-    clicktest3.style.transform = "scale(0.8)";
-    clicktest3.style.transition = "all .5s ease-in-out";
-    imageChange1.style.display = "block";
-    imageChange2.style.display = "none";
-    imageChange3.style.display = "none";
-    textbox1.style.display = "block";
-    textbox2.style.display = "none";
-    textbox3.style.display = "none";
-  }
-
-  clicktest2.addEventListener("click", mobileevent2);
-  function mobileevent2() {
-    container.style.transform = "translateX(0px)"
-    container.style.transition = "all .9s ease";
-    clicktest1.style.transform = "scale(0.8)";
-    clicktest1.style.transition = "all .5s ease-in-out";
-    clicktest2.style.transform = "scale(1.2)";
-    clicktest2.style.transition = "all .5s ease-in-out";
-    clicktest3.style.transform = "scale(0.8)";
-    clicktest3.style.transition = "all .5s ease-in-out";
-    imageChange1.style.display = "none";
-    imageChange2.style.display = "block";
-    imageChange3.style.display = "none";
-    textbox1.style.display = "none";
-    textbox2.style.display = "block";
-    textbox3.style.display = "none";
-  }
-
-  clicktest3.addEventListener("click", mobileevent3);
-  function mobileevent3() {
-    container.style.transform = "translateX(-100px)"
-    container.style.transition = "all .9s ease";
-    clicktest1.style.transform = "scale(0.8)";
-    clicktest1.style.transition = "all .5s ease-in-out";
-    clicktest2.style.transform = "scale(0.8)";
-    clicktest2.style.transition = "all .5s ease-in-out";
-    clicktest3.style.transform = "scale(1.2)";
-    clicktest3.style.transition = "all .5s ease-in-out";
-    imageChange1.style.display = "none";
-    imageChange2.style.display = "none";
-    imageChange3.style.display = "block";
-    textbox1.style.display = "none";
-    textbox2.style.display = "none";
-    textbox3.style.display = "block";
-  }
-} else {
-
-}
 
 
 // 게임소개 컨텐츠 중 가운데 스크립트 시작
@@ -90,8 +27,12 @@ const imageChange3 = document.getElementById('img3');
 // 웹 브라우저 시작 시 클릭 이벤트 함수 실행
 window.onload = function () {
   clickevent1();
-}
 
+  // 로고 클릭 시 웹 브라우저 새로고침
+  document.querySelector('.home').onclick = function () {
+    location.reload();
+  }
+}
 
 if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
   clicktest1.addEventListener("click", clickevent1);
@@ -153,5 +94,13 @@ if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
 
 
 } else {
-  removeEventListener(clickevent1,clickevent2,clickevent3);
+  removeEventListener(clickevent1, clickevent2, clickevent3);
+}
+
+if (window.matchMedia("(max-width: 380px)").matches) { 
+  imageChange1.style.display = "block";
+  imageChange2.style.display = "none";
+  imageChange3.style.display = "none";
+} else { 
+
 }

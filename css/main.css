@@ -111,6 +111,27 @@ aside {
     display: flex;
 }
 
+/* 메인 - 게임소개 컨텐츠 타이틀 기본 설정 */
+aside .asidetitle {
+    width: 100%;
+    height: auto;
+}
+
+aside .asidetitle h1 {
+    color: #fff;
+}
+
+/* 메인 - 게임소개 컨텐츠 이미지 기본 설정 */
+aside #imagebox {
+    width: 100%;
+    height: auto;
+}
+
+aside #imagebox img {
+    width: 100%;
+    height: auto;
+}
+
 /* 반응형 */
 /* @media all and (max-width:479px) {
     header {
@@ -296,13 +317,17 @@ aside {
     /* 반응형 - 모바일(320px) 메인 이미지 밑 게임소개 컨텐츠 시작 */
     aside {
         flex-flow: column wrap;
-        min-height: 530px;
         justify-content: flex-start;
+        max-width: 380px;
+        min-height: 1500px;
         margin-bottom: 25%;
     }
 
-    #featured .asidetitle {
+    aside .asidetitle {
+        max-width: 380px;
+        max-height: 35px;
         margin-bottom: 5%;
+        text-align: center;
     }
 
     #featured #image3d {
@@ -646,23 +671,18 @@ aside {
 
     /* 반응형 - PC(1920px) 게임소개 컨텐츠 왼쪽에서 첫번째 */
     aside .asidetitle {
-        width: 100%;
         max-width: 200px;
-        height: auto;
         max-height: 70px;
         text-align: center;
     }
 
     aside .asidetitle h1 {
-        color: #fff;
         font-size: 3.0em;
     }
 
     /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 시작 */
     aside #imagebox {
-        width: 100%;
         max-width: 500px;
-        height: auto;
     }
 
     aside #imagebox img {
