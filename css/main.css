@@ -357,7 +357,7 @@ aside #image3dbones div img {
         justify-content: flex-start;
         max-width: 380px;
         min-height: 400px;
-        /* margin-bottom: 25%; */
+        margin-bottom: 25%;
     }
 
     /* 반응형 - 모바일(380px) 게임소개 컨텐츠 왼쪽에서 첫번째 */
@@ -387,11 +387,12 @@ aside #image3dbones div img {
 
     aside #imagebox #asidetext {
         max-width: 80%;
+        min-height: 70px;
         margin: 0 auto;
     }
-    /* 반응형 - PC(1920px) 게임소개 컨텐츠 가운데 끝 */
+    /* 반응형 - 모바일(380px) 게임소개 컨텐츠 가운데 끝 */
 
-    /* 반응형 - PC(1920px) 게임소개 컨텐츠 오른쪽 시작 */
+    /* 반응형 - 모바일(380px) 게임소개 컨텐츠 오른쪽 시작 */
     aside #image3d {
         max-width: 380px;
         max-height: 150px;
