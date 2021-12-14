@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* 메인 - 마우스오버 효과 기본 설정 */
-:is(article, main img, .snsbox img, #image3d div img, section a, .social img) :hover {
+/* :is(article, main img, .snsbox img, #image3d div img, section a, .social img) :hover {
     cursor: pointer;
-}
+} */
 
 /* 메인 - 비디오 슬라이드 기본 설정*/
 #slider video {
@@ -45,6 +45,7 @@ article p,
 article time {
     font-size: 0.85em;
     color: #fff;
+    text-align: center;
 }
 
 article time {
@@ -169,50 +170,9 @@ aside #image3dbones div img {
     width: 100%;
     height: auto;
 }
-/* 반응형 */
-/* @media all and (max-width:479px) {
-    header {
-        width: 100%;
-        height: 150px;
-        display: flex;
-        background-color: tomato;
-    }
+/* 메인 - 기본 설정 끝 */
 
-    .headertitle {
-        display: flex;
-    }
-
-    header ul {
-        display: none;
-    }
-
-    header ul li {
-        display: block;
-    }
-
-    #slider video {
-        width: 100%;
-        max-width: 767px;
-        height: auto;
-    }
-
-    .loginbox {
-        display: none;
-    }
-
-    .mobilemenu {
-        width: 80px;
-        height: 70px;
-    }
-
-    .mobilemenu img {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-    }
-} */
-
-/* 반응형 - 모바일(380px) 시작 */
+/* 반응형 - 모바일 시작 */
 @media all and (max-width:380px) {
     /* 반응형 - 모바일 헤더 */
     header {
@@ -270,19 +230,16 @@ aside #image3dbones div img {
     /* 반응형 - 모바일 비디오 슬라이드 밑 뉴스 와이드 */
     section {
         flex-flow: column wrap;
-        max-width: 100%;
         position: relative;
     }
 
     article {
-        max-width: 100%;
         min-height: 600px;
     }
     /* 반응형 - 모바일 뉴스 와이드 텍스트 */
     article h4,
     article p,
     article time {
-        text-align: center;
         font-size: 0.9em;
         line-height: 40px;
     }
@@ -292,18 +249,22 @@ aside #image3dbones div img {
     }
 
     .cardnews p {
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: normal;
     }
 
     /* 반응형 - 모바일 뉴스 와이드 모두 보기 */
     section a {
-        max-width: 85px;
+        max-width: 90px;
         max-height: 24px;
         position: absolute;
         bottom: 1%;
         left: 40%;
         text-align: center;
+    }
+
+    section a span {
+        font-size: 1.1em;
     }
 
     /* 반응형 - 모바일 모두 보기 화살표 */
@@ -431,7 +392,7 @@ aside #image3dbones div img {
 
     /* 반응형 - 모바일 풋터 로고 */
     footer #footerlogo {
-        max-width: 100px;
+        max-width: 80px;
         margin-bottom: 20%;
     }
 
@@ -466,7 +427,7 @@ aside #image3dbones div img {
         font-size: 0.8em;
     }
 
-    /* 풋터 - 산하 스튜디오 기본 설정 */
+    /* 반응형 - 모바일 풋터 산하 스튜디오 */
     #companyinfo #affiliate {
         max-width: 100px;
         line-height: 40px;
@@ -475,81 +436,285 @@ aside #image3dbones div img {
     }
 }
 
-/* @media all and (min-width:480px) and (max-width:767px) {
+/* 반응형 - 모바일 가로 시작*/
+@media all and (min-width:381px) and (max-width:767px) {
+    /* 반응형 - 모바일 가로 헤더 */
     header {
-        display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
+        background-color: #000;
     }
 
     #logo {
-        width: 70px;
-        height: auto;
+        max-width: 70px;
+        max-height: 50px;
     }
 
+    /* 반응형 - 모바일 가로 가운데 제목 */
     .headertitle {
         display: block;
     }
 
     .mobile {
         display: block;
+        max-width: 48px;
+        min-height: 48px;
+        margin: 2%;
     }
 
-    nav {
-        display: none;
-    }
-
+    /* 반응형 - 모바일 가로 헤더 내비게이션 */
     header ul {
         display: none;
-        width: 150px;
-        height: auto;
         position: fixed;
-        top: 75px;
+        top: 10%;
         right: 0;
         margin: 0;
+        max-width: 150px;
         background-color: #000;
     }
 
+    /* 반응형 - 모바일 가로 헤더 내비게이션 메뉴 */
     header ul li {
         display: block;
-        line-height: 40px;
-    }
-
-    #slider video {
-        width: 100%;
-        max-width: 767px;
-        height: auto;
+        line-height: 60px;
     }
 
     .loginbox {
         display: none;
     }
+    /* 반응형 - 모바일 가로 헤더 끝 */
 
-    #newswide {
-        height: auto;
+    /* 반응형 - 모바일 가로 헤더 밑 비디오  */
+    #slider video {
+        max-width: 767px;
     }
 
-    .cardnews {
-        width: 100%;
-        height: 450px;
-        max-height: 600px;
-        margin: 0 16%;
-        padding-bottom: 10%;
+    /* 반응형 - 모바일 가로 비디오 슬라이드 밑 뉴스 와이드 */
+    section {
+        flex-flow: column wrap;
+        position: relative;
     }
-    .cardnews h4,
-    .cardnews p,
+
+    article {
+        max-width: 90%;
+        min-height: 500px;
+        margin: 10% 5%;
+    }
+
+    /* 반응형 - 모바일 가로 뉴스 와이드 텍스트 */
+    article h4,
+    article p,
+    article time {
+        font-size: 1.1em;
+        line-height: 40px;
+    }
+
     .cardnews time {
+        margin-top: 100%;
+    }
+
+    .cardnews p {
+        font-size: 1.3em;
+        line-height: normal;
+    }
+
+    /* 반응형 - 모바일 가로 뉴스 와이드 모두 보기 */
+    section a {
+        max-width: 85px;
+        max-height: 24px;
+        position: absolute;
+        bottom: 0.9%;
+        left: 44%;
+        text-align: center;
+    }
+
+    section a span {
+        font-size: 1.05em;
+    }
+
+    /* 반응형 - 모바일 가로 모두 보기 화살표 */
+    section a img {
+        max-width: 14px;
+        min-height: 14px;
+    }
+    /* 반응형 - 모바일 가로 뉴스 와이드 끝 */
+
+    /* 반응형 - 모바일 가로 뉴스 와이드 밑 메인 이미지 */
+    main {
+        max-width: 90%;
+        padding: 10% 5%;
+    }
+
+    /* 반응형 - 모바일 가로 메인 이미지 밑 SNS 메뉴바 */
+    .social {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 10%;
+    }
+
+    .social #snsbox {
+        max-width: 90%;
+        min-height: 90px;
+        flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #snsbox h2 {
         width: 100%;
-        margin-left: 5%;
+        font-size: 1.5rem;
+        text-align: center;
+        height: 30px;
     }
 
-    .cardnews time {
-        margin-top: 85%;
+    #snsbox h2::after {
+        display: none;
     }
-} */
 
-/* @media all and (min-width:768px) and (max-width:1023px) {
+    #snsbox img {
+        max-width: 40px;
+        min-height: 40px;
+        margin: 0 2%;
+    }
+    /* 반응형 - 모바일 가로 메인 이미지 밑 SNS 메뉴바 */
+
+    /* 반응형 - 모바일 가로 메인 이미지 밑 게임소개 컨텐츠 시작 */
+    aside {
+        flex-flow: column wrap;
+        align-items: center;
+        min-height: 520px;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 모바일 가로 게임소개 컨텐츠 왼쪽에서 첫번째 */
+    aside .asidetitle {
+        max-width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    /* 반응형 - 모바일 가로 게임소개 컨텐츠 가운데 시작 */
+    aside #imagebox {
+        max-width: 90%;
+        min-height: 400px;
+        text-align: center;
+    }
+
+    aside #imagebox img {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    /* 반응형 - 모바일 가로 가운데 게임 제목 및 설명 */
+    aside #imagebox #asidebold {
+        line-height: 50px;
+        font-size: 1.15em;
+    }
+
+    aside #imagebox #asidetext {
+        max-width: 90%;
+        min-height: 70px;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+
+    /* 반응형 - 모바일 가로 게임소개 컨텐츠 가운데 끝 */
+
+    /* 반응형 - 모바일 가로 게임소개 컨텐츠 오른쪽 시작 */
+    aside #image3d {
+        max-width: 100%;
+        max-height: 250px;
+        margin: 5% 0;
+    }
+
+    aside #image3dbones {
+        max-width: 100%;
+        max-height: 300px;
+        justify-content: space-evenly;
+    }
+
+    aside #image3dbones div {
+        max-width: 200px;
+    }
+    /* 반응형 - 모바일 가로 게임소개 컨텐츠 끝 */
+
+    /* 반응형 - 모바일 가로 풋터 시작 */
+    footer {
+        max-width: 100%;
+    }
+
+    footer .footerbox {
+        max-width: 90%;
+        min-height: 690px;
+        margin: 0 auto;
+        flex-flow: column wrap;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 로고 */
+    .footerbox #foottop {
+        justify-content: space-evenly;
+        font-size: 1.1rem;
+        margin-bottom: 15%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 로고 */
+    footer #footerlogo {
+        max-width: 100px;
+        margin-bottom: 20%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 기업정보 & SNS 아이콘 */
+    .footerbox .footerinfo {
+        min-height: 310px;
+        flex-flow: column-reverse nowrap;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 기업정보 */
+    .footerinfo ol {
+        min-height: 200px;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 SNS 아이콘 */
+    .footerinfo .iconbox {
+        justify-content: space-evenly;
+        max-height: 28px;
+        margin-bottom: 15%;
+    }
+
+    .footerinfo .iconbox img {
+        max-width: 28px;
+        max-height: 28px;
+    }
+
+    .footerbox #companyinfo {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        font-size: 1.05em;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 산하 스튜디오 */
+    #companyinfo #affiliate {
+        max-width: 23%;
+        line-height: 40px;
+        flex-flow: column nowrap;
+        margin-left: 2%;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1023px) {
     header {
         display: flex;
     }
@@ -568,7 +733,7 @@ aside #image3dbones div img {
     #slider video {
         max-width: 1023px;
     }
-}*/
+}
 
 /* 반응형 - 데스크탑 시작 */
 @media all and (min-width:1024px) and (max-width:1920px) {
@@ -856,14 +1021,16 @@ aside #image3dbones div img {
     }
 
     .footerbox #companyinfo {
-        flex-flow: row wrap;
-        justify-content: space-around;
+        max-width: 100%;
+        flex-flow: row nowrap;
         align-items: center;
+        justify-content: space-between;
     }
 
     /* 반응형 - 데스크탑 풋터 산하 스튜디오 */
     #companyinfo #affiliate {
+        max-width: 60%;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }
