@@ -1,6 +1,6 @@
 // 화면 조정시 모바일 메뉴 나타남
 $(window).resize(function () {
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1024) {
     $("#headernav").show();
   }
 });

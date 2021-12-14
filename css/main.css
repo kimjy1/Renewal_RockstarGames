@@ -24,6 +24,8 @@ article {
     height: auto;
     background-repeat: no-repeat;
     background-size: contain;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 /* 메인 - 뉴스 와이드 아티클 배경 이미지 */
@@ -64,17 +66,21 @@ section a {
 section a img {
     width: 100%;
     height: auto;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 메인 - 메인 이미지 기본 설정 */
 main {
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 main img {
     width: 100%;
     height: auto;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 /* 메인 - SNS 메뉴바 기본 설정 */
@@ -90,6 +96,7 @@ main img {
     height: auto;
     display: flex;
     background-color: #fff;
+    clip-path: polygon(0 0, 98% 0, 100% 40%, 100% 100%, 0 100%, 0% 50%);
 }
 
 #snsbox h2 {
@@ -192,21 +199,18 @@ aside #image3dbones div img {
         display: block;
     }
 
+    /* 반응형 - 모바일 햄버거 메뉴 */
     .mobile {
         display: block;
-        max-width: 48px;
-        min-height: 48px;
     }
 
     /* 반응형 - 모바일 헤더 내비게이션 */
     header ul {
         display: none;
         position: fixed;
-        top: 53px;
+        top: 80px;
         right: 0;
-        margin: 0;
         max-width: 150px;
-        background-color: #000;
     }
 
     /* 반응형 - 모바일 헤더 내비게이션 메뉴 */
@@ -224,18 +228,21 @@ aside #image3dbones div img {
 
     /* 반응형 - 모바일 헤더 밑 비디오  */
     #slider video {
-        min-height: 500px;
+        margin-bottom: 10%;
     }
 
     /* 반응형 - 모바일 비디오 슬라이드 밑 뉴스 와이드 */
     section {
         flex-flow: column wrap;
         position: relative;
+        margin-bottom: 10%;
     }
 
     article {
-        min-height: 600px;
+        max-width: 80%;
+        margin: 10%;
     }
+
     /* 반응형 - 모바일 뉴스 와이드 텍스트 */
     article h4,
     article p,
@@ -258,7 +265,7 @@ aside #image3dbones div img {
         max-width: 90px;
         max-height: 24px;
         position: absolute;
-        bottom: 1%;
+        bottom: -2%;
         left: 40%;
         text-align: center;
     }
@@ -446,30 +453,22 @@ aside #image3dbones div img {
         align-items: center;
     }
 
-    #logo {
-        max-width: 70px;
-        max-height: 50px;
-    }
-
     /* 반응형 - 모바일 가로 가운데 제목 */
     .headertitle {
         display: block;
     }
 
+    /* 반응형 - 모바일 가로 햄버거 메뉴 */
     .mobile {
         display: block;
-        max-width: 48px;
-        min-height: 48px;
-        margin: 2%;
     }
 
     /* 반응형 - 모바일 가로 헤더 내비게이션 */
     header ul {
         display: none;
         position: fixed;
-        top: 10%;
+        top: 80px;
         right: 0;
-        margin: 0;
         max-width: 150px;
     }
 
@@ -501,6 +500,10 @@ aside #image3dbones div img {
         margin: 10% 5%;
     }
 
+    article:hover {
+        transform: scale(1.0);
+    }
+
     /* 반응형 - 모바일 가로 뉴스 와이드 텍스트 */
     article h4,
     article p,
@@ -523,7 +526,7 @@ aside #image3dbones div img {
         max-width: 85px;
         max-height: 24px;
         position: absolute;
-        bottom: 0.9%;
+        bottom: -1%;
         left: 44%;
         text-align: center;
     }
@@ -536,13 +539,24 @@ aside #image3dbones div img {
     section a img {
         max-width: 14px;
         min-height: 14px;
+        position: absolute;
+        top: 5px;
+        right: -10px;
+    }
+
+    section a:hover .more_news {
+        right: -20px;
     }
     /* 반응형 - 모바일 가로 뉴스 와이드 끝 */
 
     /* 반응형 - 모바일 가로 뉴스 와이드 밑 메인 이미지 */
     main {
         max-width: 90%;
-        padding: 10% 5%;
+        margin: 10% 5%;
+    }
+
+    main img:hover {
+        transform: scale(1.0);
     }
 
     /* 반응형 - 모바일 가로 메인 이미지 밑 SNS 메뉴바 */
@@ -690,11 +704,6 @@ aside #image3dbones div img {
         margin-bottom: 15%;
     }
 
-    .footerinfo .iconbox img {
-        max-width: 28px;
-        max-height: 28px;
-    }
-
     .footerbox #companyinfo {
         flex-flow: row nowrap;
         justify-content: space-evenly;
@@ -721,25 +730,284 @@ aside #image3dbones div img {
 @media all and (min-width:768px) and (max-width:1023px) {
     /* 반응형 - 태블릿 헤더 */
     header {
-        max-width: 1023px;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
     }
 
-    .mobilemenu {
-        width: 80px;
-        height: 70px;
+    /* 반응형 - 태블릿 가운데 제목 */
+    .headertitle {
+        display: block;
     }
 
-    .mobilemenu img {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
+    /* 반응형 - 태블릿 햄버거 메뉴 */
+    .mobile {
+        display: block;
     }
 
+    /* 반응형 - 태블릿 헤더 내비게이션 */
+    header ul {
+        display: none;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        max-width: 150px;
+    }
+
+    /* 반응형 - 태블릿 헤더 내비게이션 메뉴 */
+    header ul li {
+        display: block;
+        line-height: 60px;
+    }
+
+    .loginbox {
+        display: none;
+    }
+    /* 반응형 - 태블릿 헤더 끝 */
+
+    /* 반응형 - 태블릿 헤더 밑 비디오 */
     #slider video {
         max-width: 1023px;
+    }
+
+    /* 반응형 - 태블릿 비디오 슬라이드 밑 뉴스 와이드 */
+    section {
+        flex-flow: column wrap;
+        position: relative;
+        margin-bottom: 15%;
+    }
+
+    article {
+        max-width: 80%;
+        margin: 10%;
+    }
+
+    article:hover {
+        transform: scale(1.0);
+    }
+
+    article:nth-of-type(3) {
+        padding: 10% 0 0;
+    }
+
+    /* 반응형 - 태블릿 뉴스 와이드 텍스트 */
+    article h4,
+    article p,
+    article time {
+        font-size: 1.1em;
+        line-height: 40px;
+    }
+
+    .cardnews time {
+        margin-top: 100%;
+    }
+
+    .cardnews p {
+        font-size: 1.3em;
+        line-height: normal;
+    }
+
+    /* 반응형 - 태블릿 뉴스 와이드 모두 보기 */
+    section a {
+        max-width: 85px;
+        max-height: 24px;
+        position: absolute;
+        bottom: -2%;
+        left: 45%;
+        text-align: center;
+    }
+
+    section a span {
+        font-size: 1.05em;
+    }
+
+    /* 반응형 - 태블릿 모두 보기 화살표 */
+    section a img {
+        max-width: 14px;
+        min-height: 14px;
+        position: absolute;
+        top: 5px;
+        right: -10px;
+    }
+
+    section a:hover .more_news {
+        right: -20px;
+    }
+    /* 반응형 - 태블릿 뉴스 와이드 끝 */
+
+    /* 반응형 - 태블릿 뉴스 와이드 밑 메인 이미지 */
+    main {
+        max-width: 80%;
+        margin: 0 auto 10%;
+    }
+
+    main img:hover {
+        transform: scale(1.0);
+    }
+
+    /* 반응형 - 태블릿 메인 이미지 밑 SNS 메뉴바 */
+    .social {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 10%;
+    }
+
+    .social #snsbox {
+        max-width: 90%;
+        min-height: 90px;
+        flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #snsbox h2 {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        height: 30px;
+    }
+
+    #snsbox h2::after {
+        display: none;
+    }
+
+    #snsbox img {
+        max-width: 40px;
+        min-height: 40px;
+        margin: 0 2%;
+    }
+    /* 반응형 - 태블릿 메인 이미지 밑 SNS 메뉴바 */
+
+    /* 반응형 - 태블릿 메인 이미지 밑 게임소개 컨텐츠 시작 */
+    aside {
+        flex-flow: column wrap;
+        align-items: center;
+        min-height: 900px;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 태블릿 게임소개 컨텐츠 왼쪽에서 첫번째 */
+    aside .asidetitle {
+        max-width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    /* 반응형 - 태블릿 게임소개 컨텐츠 가운데 시작 */
+    aside #imagebox {
+        max-width: 70%;
+        text-align: center;
+        min-height: 520px;
+    }
+
+    aside #imagebox img {
+        max-width: 100%;
+        min-height: 400px;
+    }
+
+    /* 반응형 - 태블릿 가운데 게임 제목 및 설명 */
+    aside #imagebox #asidebold {
+        line-height: 50px;
+        font-size: 1.15em;
+    }
+
+    aside #imagebox #asidetext {
+        max-width: 90%;
+        min-height: 70px;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+
+    /* 반응형 - 태블릿 게임소개 컨텐츠 가운데 끝 */
+
+    /* 반응형 - 태블릿 게임소개 컨텐츠 오른쪽 시작 */
+    aside #image3d {
+        max-width: 100%;
+        max-height: 250px;
+        margin: 5% 0;
+    }
+
+    aside #image3dbones {
+        max-width: 100%;
+        max-height: 300px;
+        justify-content: space-evenly;
+    }
+
+    aside #image3dbones div {
+        max-width: 250px;
+    }
+    /* 반응형 - 태블릿 게임소개 컨텐츠 끝 */
+
+    /* 반응형 - 태블릿 풋터 시작 */
+    footer {
+        max-width: 100%;
+    }
+
+    footer .footerbox {
+        max-width: 90%;
+        min-height: 350px;
+        margin: 0 auto;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    /* 반응형 - 태블릿 풋터 로고 */
+    .footerbox #foottop {
+        justify-content: space-evenly;
+        font-size: 1.1rem;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 태블릿 풋터 로고 */
+    footer #footerlogo {
+        max-width: 100px;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 기업정보 & SNS 아이콘 */
+    .footerbox .footerinfo {
+        min-height: 310px;
+        flex-flow: column-reverse nowrap;
+        margin-bottom: 10%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 기업정보 */
+    .footerinfo ol {
+        min-height: 200px;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 SNS 아이콘 */
+    .footerinfo .iconbox {
+        justify-content: space-evenly;
+        max-height: 28px;
+        margin-bottom: 15%;
+    }
+
+    .footerbox #companyinfo {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 5%;
+        font-size: 1.05em;
+        text-align: center;
+    }
+
+    .footerbox #companyinfo .infobox {
+        width: 30%;
+    }
+
+    /* 반응형 - 모바일 가로 풋터 산하 스튜디오 */
+    #companyinfo #affiliate {
+        max-width: 25%;
+        line-height: 40px;
+        flex-flow: column nowrap;
     }
 }
 
@@ -747,8 +1015,8 @@ aside #image3dbones div img {
 @media all and (min-width:1024px) and (max-width:1920px) {
     /* 반응형 - 데스크탑 헤더 */
     header {
-        max-width: 1920px;
-        max-height: 80px;
+        min-width: 1024px;
+        max-width: 100%;
     }
 
     /* 반응형 - 데스크탑 헤더 로고 */
@@ -763,7 +1031,6 @@ aside #image3dbones div img {
     header ul {
         max-width: 1200px;
         max-height: 50px;
-        display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
         margin: 1% 7% 0;
@@ -815,13 +1082,6 @@ aside #image3dbones div img {
     article {
         max-width: 480px;
         max-height: 220px;
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
-    }
-
-    article:hover {
-        transform: scale(1.0);
-        transition: all 0.3s ease-in-out;
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 텍스트 */
@@ -851,7 +1111,6 @@ aside #image3dbones div img {
         position: absolute;
         top: 5px;
         right: 15px;
-        transition: all 0.3s ease-in-out;
     }
 
     section a:hover .more_news {
@@ -859,22 +1118,15 @@ aside #image3dbones div img {
     }
     /* 반응형 - 데스크탑 뉴스 와이드 끝 */
 
-    /* 반응형 - 데스크탑 뉴스 와이드 밑 메인 이미지 시작 */
+    /* 반응형 - 데스크탑 뉴스 와이드 밑 메인 이미지*/
     main {
         max-width: 1740px;
         margin: 0 auto;
-        overflow: hidden;
-    }
-
-    main img {
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
     }
 
     main img:hover {
         transform: scale(1.0);
     }
-    /* 반응형 - 데스크탑 메인 이미지 끝 */
 
     /* 반응형 - 데스크탑 메인 이미지 밑 SNS 메뉴바 시작 */
     .social {

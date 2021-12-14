@@ -30,7 +30,7 @@ header ul li:hover::after {
 /* 헤더 - 기본 설정 */
 header {
     width: 100%;
-    height: auto;
+    height: 80px;
     display: flex;
     background-color: #000;
     position: sticky;
@@ -40,8 +40,8 @@ header {
 
 /* 헤더 - 로고 기본 설정  */
 #logo {
-    width: 100%;
-    height: auto;
+    max-width: 70px;
+    max-height: 50px;
 }
 
 /* 헤더 - 로고 이미지 기본 설정 */
@@ -54,6 +54,7 @@ header {
 header ul {
     width: 100%;
     height: auto;
+    display: flex;
     background-color: #000;
 }
 
@@ -68,6 +69,9 @@ header ul li {
     display: none;
     width: 100%;
     height: auto;
+    max-width: 48px;
+    min-height: 48px;
+    margin: 2%;
 }
 
 .mobile img {
