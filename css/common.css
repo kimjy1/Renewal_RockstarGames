@@ -16,9 +16,9 @@ header ul li:hover::after {
 /* 헤더 - 메뉴 마우스오버 효과 끝 */
 
 /* 헤더, 풋터 - 마우스 오버 시 포인트로 변환 */
-/* :is(header ul li, #foottop li, #footerlogo, .footerinfo ol li, .iconbox img, .mobile):hover {
+:is(header ul li, .mobile, #foottop li, #footerlogo, .footerinfo ol li, .iconbox img):hover {
     cursor: pointer;
-} */
+}
 
 /* 바디 - 기본 설정 */
 #wrap {
@@ -54,6 +54,7 @@ header {
 header ul {
     width: 100%;
     height: auto;
+    background-color: #000;
 }
 
 /* 헤더 - 내비게이션 메뉴 기본 설정 */

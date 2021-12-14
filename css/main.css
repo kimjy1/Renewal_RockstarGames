@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* 메인 - 마우스오버 효과 기본 설정 */
-/* :is(article, main img, .snsbox img, #image3d div img, section a, .social img) :hover {
+:is(article, section a, main img, #snsbox img, #image3dbones div img):hover {
     cursor: pointer;
-} */
+}
 
 /* 메인 - 비디오 슬라이드 기본 설정*/
 #slider video {
@@ -435,6 +435,7 @@ aside #image3dbones div img {
         margin-left: 7%;
     }
 }
+/* 반응형 - 모바일 끝 */
 
 /* 반응형 - 모바일 가로 시작*/
 @media all and (min-width:381px) and (max-width:767px) {
@@ -443,7 +444,6 @@ aside #image3dbones div img {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        background-color: #000;
     }
 
     #logo {
@@ -471,7 +471,6 @@ aside #image3dbones div img {
         right: 0;
         margin: 0;
         max-width: 150px;
-        background-color: #000;
     }
 
     /* 반응형 - 모바일 가로 헤더 내비게이션 메뉴 */
@@ -651,7 +650,6 @@ aside #image3dbones div img {
         min-height: 690px;
         margin: 0 auto;
         flex-flow: column wrap;
-        /* justify-content: center; */
         align-items: center;
     }
 
@@ -699,24 +697,34 @@ aside #image3dbones div img {
 
     .footerbox #companyinfo {
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         margin-bottom: 5%;
         font-size: 1.05em;
+        text-align: center;
+    }
+
+    .footerbox #companyinfo .infobox {
+        width: 30%;
     }
 
     /* 반응형 - 모바일 가로 풋터 산하 스튜디오 */
     #companyinfo #affiliate {
-        max-width: 23%;
+        max-width: 25%;
         line-height: 40px;
         flex-flow: column nowrap;
-        margin-left: 2%;
     }
 }
+/* 반응형 - 모바일 가로 끝 */
 
+/* 반응형 - 태블릿 시작 */
 @media all and (min-width:768px) and (max-width:1023px) {
+    /* 반응형 - 태블릿 헤더 */
     header {
-        display: flex;
+        max-width: 1023px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .mobilemenu {
@@ -1023,7 +1031,6 @@ aside #image3dbones div img {
     .footerbox #companyinfo {
         max-width: 100%;
         flex-flow: row nowrap;
-        align-items: center;
         justify-content: space-between;
     }
 
