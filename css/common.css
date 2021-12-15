@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 헤더 - 메뉴 마우스오버 효과 시작 */
-:is(.login, .home, .laptop):hover {
+:is(.login, .home):hover {
     cursor: url(../img/cursor.cur), auto;
 }
 
@@ -31,17 +31,21 @@ header ul li:hover::after {
 header {
     width: 100%;
     height: 80px;
-    display: flex;
     background-color: #000;
     position: sticky;
     top: 0;
     z-index: 5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* 헤더 - 로고 기본 설정  */
 #logo {
     max-width: 70px;
     max-height: 50px;
+    margin: 0.5%;
 }
 
 /* 헤더 - 로고 이미지 기본 설정 */
@@ -54,19 +58,47 @@ header {
 header ul {
     width: 100%;
     height: auto;
-    display: flex;
     background-color: #000;
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    max-width: 150px;
 }
 
 /* 헤더 - 내비게이션 메뉴 기본 설정 */
 header ul li {
     color: #fff;
     font-size: 0.8em;
+    line-height: 40px;
+    text-align: center;
 }
 
-/* 반응형 - 모바일 기본 설정 시작*/
-.mobile {
+.loginbox {
     display: none;
+}
+
+/* 헤더 - 메뉴 마우스오버 효과 기본 설정 */
+header ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: #ff9900;
+}
+
+/* 데스크탑 제외)헤더 제목 기본 설정 */
+.headertitle {
+    display: block;
+}
+
+.headertitle h3 {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* 데스크탑 제외)햄버거 메뉴 기본 설정 */
+.mobile {
     width: 100%;
     height: auto;
     max-width: 48px;
@@ -79,32 +111,7 @@ header ul li {
     height: auto;
 }
 
-.headertitle {
-    display: none;
-}
-
-.headertitle h3 {
-    color: #fff;
-    font-size: 0.9em;
-}
-/* 반응형 - 모바일 기본 설정 끝*/
-
-/* 헤더 - 로그인/회원가입 기본 설정 */
-.loginbox {
-    width: 100%;
-    height: auto;
-    color: #fff;
-    font-size: 0.8em;
-}
-
-/* 헤더 - 메뉴 마우스오버 효과 기본 설정 */
-header ul li::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background-color: #ff9900;
-}
+/* ---------------------------------------------------------------------- */
 
 /* 풋터 - 기본 설정 시작 */
 footer {
@@ -117,26 +124,38 @@ footer {
 footer .footerbox {
     width: 100%;
     height: auto;
+    min-height: 690px;
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerbox #foottop {
     width: 100%;
     height: auto;
     display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15%;
+    font-size: 1.1rem;
 }
 
 /* 풋터 - 로고 기본 설정*/
 .footerbox #footerlogo {
     width: 100%;
     height: auto;
+    max-width: 80px;
+    margin-bottom: 20%;
 }
 
 /* 풋터 - 기업정보 & SNS 아이콘 기본 설정 */
 .footerbox .footerinfo {
     width: 100%;
     height: auto;
+    min-height: 310px;
     display: flex;
+    flex-flow: column-reverse nowrap;
+    margin-bottom: 10%;
 }
 
 /* 풋터 - 기업정보 기본 설정 */
@@ -144,6 +163,12 @@ footer .footerbox {
     width: 100%;
     height: auto;
     display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    min-height: 200px;
 }
 
 /* 풋터 - SNS 아이콘 기본 설정 */
@@ -151,13 +176,15 @@ footer .footerbox {
     width: 100%;
     height: auto;
     display: flex;
+    justify-content: space-evenly;
+    max-width: 24px;
+    max-height: 24px;
+    margin-bottom: 15%;
 }
 
 .footerinfo .iconbox img {
     width: 100%;
     height: auto;
-    max-width: 24px;
-    max-height: 24px;
 }
 
 .footerbox #companyinfo {
@@ -174,19 +201,54 @@ footer .footerbox {
 }
 /* 풋터 - 기본 설정 끝 */
 
-/* 반응형 - 노트북 기본 설정 */
-.laptop {
-    display: none;
-    background-image: url("../img/menu3.png");
-}
+/* 반응형 - 데스크탑 시작 */
+@media all and (min-width:1024px) and (max-width:1920px) {
+    /* 반응형 - 데스크탑 헤더 내비게이션 */
+    header ul {
+        max-width: 50%;
+        max-height: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        margin: 2% 7% 0;
+        position: static;
+    }
 
-#laptopmenu {
-    margin: 10px;
-}
+    /* 반응형 - 데스크탑 헤더 내비게이션 메뉴 */
+    header ul li {
+        line-height: 20px;
+    }
 
-/* .laptop {
-    width: 64px;
-    height: 64px;
-    display: inline-block;
-    margin: 10px;
-} */
+    /* 반응형 - 데스크탑 헤더 로그인/회원가입 */
+    .loginbox {
+        width: 100%;
+        height: auto;
+        color: #fff;
+        font-size: 0.8em;
+        max-width: 20%;
+        max-height: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1% 0 0 3%;
+    }
+
+    /* 반응형 - 데스크탑 헤더 로그인 */
+    .login {
+        padding: 5% 10%;
+    }
+
+    /* 반응형 - 데스크탑 헤더 회원가입 */
+    .signup {
+        padding: 5% 12%;
+    }
+
+    .headertitle {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
