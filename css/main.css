@@ -337,22 +337,6 @@ aside #image3dbones div img {
     }
     /* 반응형 - 모바일 게임소개 컨텐츠 끝 */
 
-    /* 반응형 - 모바일 풋터 시작 */
-    .footerbox #companyinfo {
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 5%;
-        font-size: 0.8em;
-    }
-
-    /* 반응형 - 모바일 풋터 산하 스튜디오 */
-    #companyinfo #affiliate {
-        max-width: 100px;
-        line-height: 40px;
-        flex-flow: column nowrap;
-        margin-left: 7%;
-    }
 }
 /* 반응형 - 모바일 끝 */
 
@@ -529,26 +513,6 @@ aside #image3dbones div img {
     }
     /* 반응형 - 모바일 가로 게임소개 컨텐츠 끝 */
 
-    /* 반응형 - 모바일 가로 풋터 시작 */
-    .footerbox #companyinfo {
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 5%;
-        font-size: 1.05em;
-        text-align: center;
-    }
-
-    .footerbox #companyinfo .infobox {
-        width: 30%;
-    }
-
-    /* 반응형 - 모바일 가로 풋터 산하 스튜디오 */
-    #companyinfo #affiliate {
-        max-width: 25%;
-        line-height: 40px;
-        flex-flow: column nowrap;
-    }
 }
 /* 반응형 - 모바일 가로 끝 */
 
@@ -724,29 +688,6 @@ aside #image3dbones div img {
         max-width: 250px;
     }
     /* 반응형 - 태블릿 게임소개 컨텐츠 끝 */
-
-    /* 반응형 - 태블릿 풋터 시작 */
-
-    /* 반응형 - 모바일 가로 풋터 SNS 아이콘 */
-    .footerbox #companyinfo {
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 5%;
-        font-size: 1.05em;
-        text-align: center;
-    }
-
-    .footerbox #companyinfo .infobox {
-        width: 30%;
-    }
-
-    /* 반응형 - 모바일 가로 풋터 산하 스튜디오 */
-    #companyinfo #affiliate {
-        max-width: 25%;
-        line-height: 40px;
-        flex-flow: column nowrap;
-    }
 }
 
 /* 반응형 - 데스크탑 시작 */
@@ -935,7 +876,6 @@ aside #image3dbones div img {
         max-width: 80%;
         min-height: 450px;
         margin: 0 auto;
-        flex-flow: row wrap;
         justify-content: center;
         align-content: flex-start;
     }
@@ -957,7 +897,7 @@ aside #image3dbones div img {
     /* 반응형 - 데스크탑 풋터 기업정보 & SNS 아이콘 */
     .footerbox .footerinfo {
         flex-flow: row nowrap;
-        max-width: 50%;
+        max-width: 100%;
         min-height: 50px;
         margin-bottom: 5%;
     }
@@ -969,21 +909,23 @@ aside #image3dbones div img {
         flex-flow: row wrap;
         justify-content: space-evenly;
         align-items: center;
+        font-size: 0.95em;
     }
 
     /* 반응형 - 데스크탑 풋터 SNS 아이콘 */
     .footerinfo .iconbox {
         max-width: 50%;
-        min-height: 50px;
+        max-height: 50px;
         flex-flow: row nowrap;
         align-items: center;
-        margin-bottom: 5%;
+        margin-bottom: 0;
     }
 
     .footerbox #companyinfo {
         max-width: 100%;
         flex-flow: row nowrap;
         justify-content: space-between;
+        font-size: 0.8em;
     }
 
     /* 반응형 - 데스크탑 풋터 산하 스튜디오 */
