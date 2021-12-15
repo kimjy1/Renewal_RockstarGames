@@ -296,10 +296,13 @@ aside #image3dbones div img {
     }
 
     .social #snsbox {
+        max-width: 90%;
         max-height: 90px;
         flex-flow: row wrap;
         align-content: space-around;
         justify-content: center;
+        margin: 0 auto;
+        clip-path: polygon(0 0, 90% 0, 100% 38%, 100% 100%, 0 100%, 0% 50%);
     }
 
     #snsbox h2 {
@@ -497,7 +500,7 @@ aside #image3dbones div img {
     article {
         max-width: 90%;
         min-height: 500px;
-        margin: 10% 5%;
+        margin: 12% 5%;
     }
 
     article:hover {
@@ -772,22 +775,18 @@ aside #image3dbones div img {
 
     /* 반응형 - 태블릿 비디오 슬라이드 밑 뉴스 와이드 */
     section {
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
+        justify-content: space-around;
         position: relative;
         margin-bottom: 15%;
     }
 
     article {
-        max-width: 80%;
-        margin: 10%;
+        max-width: 23%;
     }
 
     article:hover {
         transform: scale(1.0);
-    }
-
-    article:nth-of-type(3) {
-        padding: 10% 0 0;
     }
 
     /* 반응형 - 태블릿 뉴스 와이드 텍스트 */
@@ -812,8 +811,8 @@ aside #image3dbones div img {
         max-width: 85px;
         max-height: 24px;
         position: absolute;
-        bottom: -2%;
-        left: 45%;
+        bottom: -22%;
+        right: 6%;
         text-align: center;
     }
 
@@ -1015,6 +1014,7 @@ aside #image3dbones div img {
 @media all and (min-width:1024px) and (max-width:1920px) {
     /* 반응형 - 데스크탑 헤더 */
     header {
+        justify-content: space-between;
         min-width: 1024px;
         max-width: 100%;
     }
@@ -1029,22 +1029,21 @@ aside #image3dbones div img {
 
     /* 반응형 - 데스크탑 헤더 내비게이션 */
     header ul {
-        max-width: 1200px;
+        max-width: 50%;
         max-height: 50px;
         flex-flow: row nowrap;
         justify-content: space-around;
-        margin: 1% 7% 0;
+        margin: 2% 7% 0;
     }
 
     /* 반응형 - 데스크탑 헤더 내비게이션 메뉴 */
     header ul li {
-        padding: 10px 20px;
-        line-height: 30px;
+        line-height: 20px;
     }
 
     /* 반응형 - 데스크탑 헤더 로그인/회원가입 */
     .loginbox {
-        max-width: 250px;
+        max-width: 20%;
         max-height: 50px;
         display: flex;
         flex-flow: row nowrap;
@@ -1070,26 +1069,32 @@ aside #image3dbones div img {
 
     /* 반응형 - 데스크탑 비디오 슬라이드 밑 뉴스 와이드 */
     section {
-        max-width: 1920px;
+        max-width: 100%;
         min-height: 250px;
         flex-flow: row wrap;
         justify-content: space-around;
         position: relative;
-        margin: 5% 0;
+        margin: 10% 0;
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 아티클 */
     article {
-        max-width: 480px;
-        max-height: 220px;
+        max-width: 20%;
+    }
+
+    article:hover {
+        transform: scale(1.0);
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 텍스트 */
     article h4,
     article p,
     article time {
-        margin-left: 50%;
         line-height: 40px;
+    }
+
+    article time {
+        margin-top: 100%;
     }
 
     article p {
@@ -1099,8 +1104,8 @@ aside #image3dbones div img {
     /* 반응형 - 데스크탑 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 */
     section a {
         position: absolute;
-        top: 250px;
-        right: 70px;
+        right: 5%;
+        bottom: -20%;
         max-width: 100px;
         min-height: 30px;
     }
@@ -1120,7 +1125,7 @@ aside #image3dbones div img {
 
     /* 반응형 - 데스크탑 뉴스 와이드 밑 메인 이미지*/
     main {
-        max-width: 1740px;
+        max-width: 90%;
         margin: 0 auto;
     }
 
@@ -1130,7 +1135,7 @@ aside #image3dbones div img {
 
     /* 반응형 - 데스크탑 메인 이미지 밑 SNS 메뉴바 시작 */
     .social {
-        max-width: 1780px;
+        max-width: 90%;
         min-height: 250px;
         margin: 0 auto;
         justify-content: center;
@@ -1163,8 +1168,8 @@ aside #image3dbones div img {
 
     /* 반응형 - 데스크탑 SNS 메뉴바 밑 게임소개 컨텐츠 */
     aside {
-        max-width: 1920px;
-        max-height: 700px;
+        max-width: 100%;
+        max-height: 500px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -1186,6 +1191,11 @@ aside #image3dbones div img {
     /* 반응형 - 데스크탑 게임소개 컨텐츠 가운데 시작 */
     aside #imagebox {
         max-width: 500px;
+        min-height: 400px;
+    }
+
+    aside #imagebox img {
+        min-height: 300px;
     }
 
     /* 반응형 - 데스크탑 가운데 게임 제목 및 설명 */
@@ -1233,7 +1243,7 @@ aside #image3dbones div img {
     }
 
     footer .footerbox {
-        max-width: 1200px;
+        max-width: 90%;
         min-height: 400px;
         margin: 0 auto;
         display: flex;
