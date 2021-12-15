@@ -193,10 +193,10 @@ footer .footerbox {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: space-evenly;
     font-size: 1.05em;
     margin-bottom: 5%;
     text-align: center;
-    justify-content: center;
 }
 
 /* 반응형 - 모바일 가로 풋터 SNS 아이콘 */
