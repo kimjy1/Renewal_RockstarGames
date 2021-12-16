@@ -29,7 +29,7 @@ const imageChange1 = document.getElementById('img1');
 const imageChange2 = document.getElementById('img2');
 const imageChange3 = document.getElementById('img3');
 
-// 반응형 - 게임소개 컨텐츠 스크립트(PC)
+// 반응형 - 게임소개 컨텐츠 스크립트(데스크탑)
 if (window.matchMedia("(min-width: 1024px) and (max-width:1920px)").matches) {
   clicktest1.addEventListener("click", clickevent1);
   function clickevent1() {

@@ -39,6 +39,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
 }
 
 /* 헤더 - 로고 기본 설정  */
@@ -224,7 +225,6 @@ footer .footerbox {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
-        margin: 1% 7% 0;
         position: static;
     }
 
@@ -233,29 +233,28 @@ footer .footerbox {
         line-height: 20px;
     }
 
-    /* 반응형 - 데스크탑 헤더 로그인/회원가입 */
+    /* 반응형 - 데스크탑 헤더 로그인/회원가입 플렉스박스 */
     .loginbox {
         width: 100%;
         height: auto;
-        color: #fff;
-        font-size: 0.8em;
         max-width: 20%;
         max-height: 50px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
         align-items: center;
-        margin: 0.5% 0 0 3%;
     }
 
-    /* 반응형 - 데스크탑 헤더 로그인 */
+    /* 반응형 - 데스크탑 헤더 로그인/회원가입 */
     .login {
-        padding: 3% 7%;
+        padding: 4% 10%;
+        color: #fff;
+        font-size: 0.8em;
     }
 
     /* 반응형 - 데스크탑 헤더 회원가입 */
     .signup {
-        padding: 3% 10%;
+        padding: 4% 12%;
     }
 
     .headertitle {
