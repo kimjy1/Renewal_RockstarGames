@@ -1,1 +1,92 @@
 @charset "UTF-8";
+
+/* 서브 - 마우스오버 효과 기본 설정 */
+.mainimage button:hover {
+    cursor: pointer;
+    color: #000;
+    background: linear-gradient(90deg, rgba(166,141,101,1) 0%, rgba(151,125,82,1) 47%, rgba(225,213,173,1) 100%);
+    border: 2px solid #9f8354;
+}
+
+/* 서브 - 메인 이미지 기본 설정 */
+.mainimage {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+    min-height: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainimage img {
+    width: 100%;
+    height: auto;
+    max-width: 50%;
+}
+
+.mainimage button {
+    width: 100%;
+    height: auto;
+    max-width: 40%;
+    min-height: 100px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 2.0em;
+    transition: all 0.2s ease-in-out;
+    background: #000;
+}
+
+/* 서브 - 게임소개 페이지 */
+.introduction {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    min-height: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: orange;
+}
+
+.introduction .twinbox {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduction aside {
+    width: 100%;
+    height: auto;
+    max-width: 40%;
+    background-color: red;
+}
+
+.introduction aside h1 {
+    font-size: 1.5em;
+    line-height: 60px;
+}
+
+.introduction ul {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    background-color: red;
+}
+
+.introduction ul li {
+    flex-basis: 40%;
+    line-height: 50px;
+    background-color: blue;
+}
