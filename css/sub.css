@@ -35,7 +35,7 @@
     border: 2px solid #fff;
     color: #fff;
     font-size: 2.0em;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease;
     background: #000;
 }
 
@@ -43,10 +43,7 @@
 .introduction {
     width: 100%;
     height: auto;
-    max-width: 80%;
-    min-height: 1200px;
-    margin: 0 auto;
-    display: flex;
+    max-width: 100%;
     flex-flow: row wrap;
     justify-content: space-between;
     background-color: orange;
@@ -55,23 +52,31 @@
 .introduction .twinbox {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    min-height: 450px;
     background-color: purple;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-flow: column-reverse nowrap;
+}
+
+.introduction iframe {
+    width: 100%;
+    height: 100%;
+
+    min-width: 327px;
+    min-height: 184px;
+    max-height: 450px;
 }
 
 .introduction aside {
     width: 100%;
     height: auto;
     max-width: 40%;
-    background-color: red;
+    background-color: aqua;
 }
 
-.introduction aside h1 {
-    font-size: 1.5em;
-    line-height: 60px;
+.introduction h1 {
+    font-size: 2.2em;
+    line-height: 80px;
 }
 
 .introduction ul {
@@ -80,13 +85,62 @@
     min-height: 600px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: space-around;
     background-color: red;
 }
 
 .introduction ul li {
-    flex-basis: 40%;
-    line-height: 50px;
+    flex-basis: 35%;
+    line-height: 45px;
     background-color: blue;
+    list-style: url("../img/li_img.png");
+}
+
+.introduction span {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.introduction p {
+    line-height: 30px;
+
+}
+
+.introduction hr {
+    width: 100%;
+    height: 1px;
+}
+
+.introduction .updateNews {
+    text-align: center;
+}
+
+@media all and (min-width:381px) and (max-width:767px) {
+    }
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    }
+
+@media all and (min-width:1024px) and (max-width:1920px) {
+    .introduction {
+        max-width: 80%;
+        min-height: 1500px;
+        margin: 0 auto;
+    }
+
+    .introduction .twinbox {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    .introduction iframe {
+        max-width: 800px;
+        min-height: 450px;
+    }
+
+    .introduction ul li {
+        line-height: normal;
+    }
 }
