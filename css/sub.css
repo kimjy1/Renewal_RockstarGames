@@ -60,7 +60,7 @@ button {
     min-height: 500px;
     display: flex;
     flex-flow: column-reverse nowrap;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 /* 서브 - 게임소개 페이지 : 유튜브 영상 */
@@ -82,7 +82,7 @@ button {
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .introduction h1 {
@@ -99,7 +99,7 @@ button {
     justify-content: space-around;
     align-content: space-around;
     font-size: 1.5em;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .introduction ul li {
@@ -107,7 +107,7 @@ button {
     line-height: 45px;
     list-style-image: url("../img/list_gunimg.jpg");
     color: #666;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .introduction span {
@@ -127,7 +127,6 @@ button {
 }
 
 .introduction .updateNews {
-    margin: 15% 0;
     text-align: center;
 }
 
@@ -185,6 +184,7 @@ button {
 
     .introduction hr {
         display: block;
+        margin: 7% 0;
     }
 
     .updateNews button {
