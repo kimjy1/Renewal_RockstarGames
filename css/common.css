@@ -94,7 +94,6 @@ header ul li::after {
 }
 
 .headertitle h3 {
-    color: #fff;
     font-size: 0.9em;
 }
 
@@ -118,7 +117,6 @@ header ul li::after {
 footer {
     width: 100%;
     height: auto;
-    color: #fff;
     font-size: 0.9em;
 }
 
