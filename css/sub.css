@@ -90,6 +90,11 @@ button {
     line-height: 80px;
 }
 
+.introduction p {
+    font-size: 1.15em;
+    line-height: 30px;
+}
+
 .introduction ul {
     width: 100%;
     height: auto;
@@ -106,7 +111,7 @@ button {
     flex-basis: 35%;
     line-height: 45px;
     list-style-image: url("../img/list_gunimg.jpg");
-    color: #666;
+    color: #d89100;
     /* background-color: blue; */
 }
 
@@ -116,8 +121,13 @@ button {
     text-align: center;
 }
 
+.introduction span h1 {
+    line-height: 120px;
+}
+
 .introduction span p {
-    line-height: 30px;
+    font-size: 1.2em;
+    line-height: 50px;
 }
 
 .introduction hr {
@@ -175,7 +185,10 @@ button {
     .introduction aside {
         max-width: 38%;
         padding: 0 5%;
+    }
 
+    .introduction aside p {
+        text-align: left;
     }
 
     .introduction ul li {
