@@ -1,14 +1,23 @@
 @charset "UTF-8";
 
 /* 서브 - 마우스오버 효과 기본 설정 */
-button {
+:is(button, .titleLogo>img) {
   cursor: pointer;
 }
 
-.mainimage button:hover {
+button:hover {
   color: #000;
   background: linear-gradient(90deg, rgba(166, 141, 101, 1) 0%, rgba(151, 125, 82, 1) 47%, rgba(225, 213, 173, 1) 100%);
   border: 2px solid #9f8354;
+}
+
+/* 서브 - 수평선 */
+hr {
+  width: 100%;
+  max-width: 90%;
+  height: 1px;
+  display: none;
+  margin: 5% auto;
 }
 
 /* 서브 - 메인 이미지 기본 설정 */
@@ -31,7 +40,7 @@ button {
 }
 
 /* 서브 - 메인 이미지 구매하기 버튼 */
-.mainimage button {
+button {
   width: 100%;
   height: auto;
   max-width: 40%;
@@ -72,15 +81,15 @@ button {
     max-height: 450px; */
   max-width: 90%;
   min-height: 450px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
-/* 서브 - 텍스트 박스 */
+/* 서브 - 게임 소개 */
 .introduction aside {
   width: 100%;
   height: auto;
   max-width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
   /* background-color: orange; */
 }
@@ -95,6 +104,7 @@ button {
   line-height: 30px;
 }
 
+/* 서브 - 개선 사항 */
 .introduction ul {
   width: 100%;
   height: auto;
@@ -130,20 +140,21 @@ button {
   line-height: 50px;
 }
 
-.introduction hr {
+/* 서브 - 업데이트 소식  */
+.updateNews {
   width: 100%;
-  height: 1px;
-  display: none;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-.introduction .updateNews {
-  text-align: center;
-}
-
+/* 서브 - 업데이트 소식 내용 */
 .updateNews p {
   margin-bottom: 3%;
 }
 
+/* 서브 - 업데이트 소식 받기 버튼 */
 .updateNews button {
   width: 100%;
   height: auto;
@@ -162,12 +173,55 @@ button {
   opacity: 1.0;
 }
 
+/* 서브 - 업데이트 소식 밑 개별적 타이틀 */
+.IndividualTitles {
+  width: 100%;
+  max-width: 45%;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.IndividualTitles section:not(:first-child) {
+  display: none;
+}
+
+.IndividualTitles section h2 {
+  font-size: 2.5em;
+  line-height: 80px;
+}
+
+/* 서브 - 개별적 타이틀 밑 로고 */
+.IndividualTitles .titleLogo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 5% 0;
+}
+
+.IndividualTitles .titleLogo img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: orange;
+}
+
+/* 서브 - 리마스터 전/후 비교 동영상 슬라이더 */
 .ComparisonVideo {
   width: 1200px;
   height: 700px;
   position: relative;
   margin: 0 auto;
-  /*   outline: 1px solid red; */
+}
+
+.ComparisonVideo video:not(:first-of-type) {
+  display: none;
 }
 
 .after {
@@ -178,11 +232,25 @@ button {
   height: 100%;
   display: block;
   overflow: hidden;
-  /* background-color: blue; */
 }
 
-iframe {
-  pointer-events: none;
+/* 서브 - 하단 구매 섹션 */
+.pre-purchase {
+  width: 100%;
+  height: auto;
+  max-width: 74%;
+  min-height: 700px;
+  background-image: url("../img/purchaseimg.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pre-purchase button {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-30% -45%);
 }
 
 @media all and (min-width:320px) and (max-width:767px) {}
@@ -190,13 +258,18 @@ iframe {
 @media all and (min-width:768px) and (max-width:1023px) {}
 
 @media all and (min-width:1024px) and (max-width:1920px) {
+  hr {
+    display: block;
+  }
+
   .introduction {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }
 
   .introduction .twinbox {
     flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -207,20 +280,12 @@ iframe {
 
   .introduction aside {
     max-width: 38%;
-    padding: 0 5%;
-  }
-
-  .introduction aside p {
+    /* padding: 0 5%; */
     text-align: left;
   }
 
   .introduction ul li {
     line-height: normal;
-  }
-
-  .introduction hr {
-    display: block;
-    margin: 7% 0;
   }
 
   .updateNews button {
