@@ -1,3 +1,17 @@
+// 화면 조정시 모바일 메뉴 나타남
+$(window).resize(function () {
+  if (window.innerWidth >= 1024) {
+    $("#headernav").show();
+  }
+});
+
+// 모바일 메뉴 효과 (제이쿼리)
+$(function () {
+  $(".mobile").click(function () {
+    $("#headernav").slideToggle("slow");
+  });
+});
+
 $(function () {
   $(".login").click(function (e) {
     e.preventDefault();

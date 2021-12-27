@@ -24,9 +24,6 @@ hr {
 .mainimage {
   width: 100%;
   height: auto;
-  max-width: 90%;
-  min-height: 900px;
-  margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -39,17 +36,26 @@ hr {
   max-width: 50%;
 }
 
-/* 서브 - 메인 이미지 구매하기 버튼 */
+.mainimage .pcSupportImg {
+  display: block;
+}
+
+.mainimage .mobileSupportImg {
+  display: none;
+}
+
+/* 서브 - 상단, 하단 구매하기 버튼 */
 button {
   width: 100%;
   height: auto;
+  color: #fff;
   max-width: 40%;
   min-height: 100px;
-  border: 2px solid #fff;
-  color: #fff;
   font-size: 2.0em;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: #000;
   transition: all 0.3s ease;
-  background: #000;
 }
 
 /* 서브 - 게임소개 페이지 */
@@ -57,6 +63,7 @@ button {
   width: 100%;
   height: auto;
   max-width: 100%;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   /* background-color: purple; */
@@ -156,14 +163,11 @@ button {
 
 /* 서브 - 업데이트 소식 받기 버튼 */
 .updateNews button {
-  width: 100%;
-  height: auto;
   max-width: 35%;
   margin-bottom: 10%;
   padding: 2% 0;
-  border-radius: 20px;
   font-size: 1.5em;
-  background-color: #ffab00;
+  background: #ffab00;
   color: #000;
   opacity: 0.8;
   transition: opacity 0.5s ease-out;
@@ -273,11 +277,48 @@ button {
   transform: translateX(-50%);
 }
 
-@media all and (min-width:320px) and (max-width:767px) {}
+/* 반응형 - 모바일 시작 */
+@media all and (min-width:320px) and (max-width:767px) {
+
+  /* 반응형 - 모바일 메인 이미지 시작 */
+  .mainimage {
+    min-height: 600px;
+  }
+
+  .mainimage img {
+    max-width: 100%;
+  }
+
+  .mainimage .pcSupportImg {
+    display: none;
+  }
+
+  .mainimage .mobileSupportImg {
+    display: block;
+    max-width: 80%;
+  }
+
+  button {
+    max-width: 80%;
+    border-radius: 10px;
+  }
+  /* 반응형 - 모바일 메인 이미지 끝 */
+
+  /* 반응형 - 모바일 메인 이미지 밑 게임소개 페이지 시작 */
+  .introduction {
+    align-items: center;
+  }
+}
 
 @media all and (min-width:768px) and (max-width:1023px) {}
 
 @media all and (min-width:1024px) and (max-width:1920px) {
+  .mainimage {
+    max-width: 90%;
+    min-height: 900px;
+    margin: 0 auto;
+  }
+
   hr {
     display: block;
   }
