@@ -101,6 +101,7 @@ button {
 .introduction h1 {
   font-size: 2.2em;
   line-height: 80px;
+  padding-bottom: 5%;
 }
 
 .introduction p {
@@ -116,9 +117,8 @@ button {
 }
 
 .introduction ul li {
-  flex-basis: 35%;
   line-height: 45px;
-  list-style-image: url("../img/list_gunimg.jpg");
+  list-style-image: url("../img/mobile_gunimg.jpg");
   color: #d89100;
 }
 
@@ -126,16 +126,18 @@ button {
   width: 100%;
   height: auto;
   text-align: center;
+  max-width: 90%;
+  padding: 5%;
 }
 
 .introduction span h1 {
   line-height: 120px;
 }
 
-.introduction span p {
+/* .introduction span p {
   font-size: 1.2em;
   line-height: 50px;
-}
+} */
 
 /* 서브 - 업데이트 소식  */
 .updateNews {
@@ -144,16 +146,18 @@ button {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  max-width: 90%;
+  padding: 0 5%;
+  text-align: center;
 }
 
 /* 서브 - 업데이트 소식 내용 */
 .updateNews p {
-  margin-bottom: 3%;
+  padding-bottom: 5%;
 }
 
 /* 서브 - 업데이트 소식 받기 버튼 */
 .updateNews button {
-  max-width: 35%;
   margin-bottom: 10%;
   padding: 2% 0;
   font-size: 1.5em;
@@ -170,7 +174,6 @@ button {
 /* 서브 - 업데이트 소식 밑 개별적 타이틀 */
 .IndividualTitles {
   width: 100%;
-  max-width: 45%;
   height: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -183,10 +186,7 @@ button {
   display: none;
 }
 
-.IndividualTitles section h2 {
-  font-size: 2.5em;
-  line-height: 80px;
-}
+/* .IndividualTitles section h2 {} */
 
 /* 서브 - 개별적 타이틀 밑 로고 */
 .IndividualTitles .titleLogo {
@@ -212,6 +212,11 @@ button {
   height: 700px;
   position: relative;
   margin: 0 auto;
+}
+
+.ComparisonVideo video {
+  width: 1200px;
+  height: 700px;
 }
 
 .ComparisonVideo video:not(:first-of-type) {
@@ -290,6 +295,7 @@ button {
 
   button {
     max-width: 80%;
+    min-height: auto;
     border-radius: 10px;
   }
 
@@ -305,10 +311,9 @@ button {
     margin: 0 auto;
   }
 
-  .introduction h1 {
+  .introduction aside h1 {
     font-size: 1.6em;
     line-height: normal;
-    margin-bottom: 5%;
   }
 
   .introduction p {
@@ -316,8 +321,52 @@ button {
   }
 
   .introduction ul {
-    max-width: 90%;
+    max-width: 80%;
     flex-direction: column;
+    padding-left: 15%;
+  }
+
+  .introduction ul li {
+    line-height: 4;
+    font-size: 0.9em;
+  }
+
+  .introduction ul li:nth-of-type(2n) {
+    line-height: 150%;
+  }
+
+  .introduction span h1 {
+    line-height: normal;
+    font-size: 1.1em;
+  }
+
+  .updateNews h1 {
+    font-size: 1.3em;
+    padding-bottom: 5%;
+  }
+
+  .updateNews button {
+    font-size: 0.8em;
+  }
+
+  .IndividualTitles {
+    max-width: 90%;
+  }
+
+  .IndividualTitles section h2 {
+    font-size: 1.2em;
+    padding-bottom: 5%;
+  }
+
+  .ComparisonVideo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ComparisonVideo video {
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
   }
 }
 
@@ -359,6 +408,10 @@ button {
     text-align: left;
   }
 
+  .introduction h1 {
+    padding-bottom: 0;
+  }
+
   .introduction ul {
     flex-flow: row wrap;
     justify-content: space-around;
@@ -367,9 +420,15 @@ button {
     font-size: 1.5em;
   }
 
-
   .introduction ul li {
+    flex-basis: 35%;
     line-height: normal;
+    list-style-image: url("../img/list_gunimg.jpg");
+  }
+
+  .introduction span p {
+    font-size: 1.2em;
+    line-height: 50px;
   }
 
   .updateNews button {
@@ -378,5 +437,14 @@ button {
     padding: 2% 0;
     border-radius: 20px;
     font-size: 1.5em;
+  }
+
+  .IndividualTitles {
+    max-width: 45%;
+  }
+
+  .IndividualTitles section h2 {
+    font-size: 2.5em;
+    line-height: 80px;
   }
 }
