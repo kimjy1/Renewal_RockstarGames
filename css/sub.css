@@ -208,15 +208,15 @@ button {
 
 /* 서브 - 리마스터 전/후 비교 동영상 슬라이더 */
 .ComparisonVideo {
-  width: 1200px;
-  height: 700px;
   position: relative;
-  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 63%;
+  margin: 5% auto;
 }
 
 .ComparisonVideo video {
-  width: 1200px;
-  height: 700px;
+  width: 100%;
 }
 
 .ComparisonVideo video:not(:first-of-type) {
@@ -224,13 +224,22 @@ button {
 }
 
 .after {
+  width: 50%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 100%;
-  display: block;
   overflow: hidden;
+}
+
+.after>video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 99.5%;
+  width: auto;
+  max-width: none;
 }
 
 /* 서브 - 하단 구매 섹션 */
@@ -356,17 +365,6 @@ button {
   .IndividualTitles section h2 {
     font-size: 1.2em;
     padding-bottom: 5%;
-  }
-
-  .ComparisonVideo {
-    width: 100%;
-    height: auto;
-  }
-  
-  .ComparisonVideo video {
-    width: 100%;
-    max-width: 90%;
-    height: 100%;
   }
 }
 
