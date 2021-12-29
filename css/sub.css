@@ -36,12 +36,12 @@ hr {
   max-width: 50%;
 }
 
-.mainimage .pcSupportImg {
-  display: block;
+.pcSupportImg {
+  display: none;
 }
 
-.mainimage .mobileSupportImg {
-  display: none;
+.mobileSupportImg {
+  display: block;
 }
 
 /* 서브 - 상단, 하단 구매하기 버튼 */
@@ -211,8 +211,8 @@ button {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 63%;
-  margin: 5% auto;
+  max-width: 90%;
+  margin: 5% auto 10%;
 }
 
 .ComparisonVideo video {
@@ -246,12 +246,10 @@ button {
 .pre-purchase {
   width: 100%;
   height: auto;
-  max-width: 74%;
-  min-height: 700px;
-  background-image: url("../img/purchaseimg.jpg");
-  background-size: cover;
-  margin: 0 13% 5% 13%;
+  min-height: 400px;
   position: relative;
+  background: url("../img/purchaseimg.jpg") no-repeat center top / contain;
+  margin-bottom: 15%;
 }
 
 .pre-purchase h1 {
@@ -266,14 +264,13 @@ button {
 
 .pre-purchase button {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .pre-purchase img {
   width: 100%;
-  max-width: 57%;
   height: auto;
   position: absolute;
   left: 50%;
@@ -366,11 +363,29 @@ button {
     font-size: 1.2em;
     padding-bottom: 5%;
   }
+
+  .pre-purchase h1 {
+    font-size: 1.5em;
+  }
+
+  .pre-purchase button {
+    max-width: 90%;
+    font-size: 1.2em;
+    bottom: 30%;
+  }
 }
 
 @media all and (min-width:768px) and (max-width:1023px) {}
 
 @media all and (min-width:1024px) and (max-width:1920px) {
+  .pcSupportImg {
+    display: block;
+  }
+
+  .mobileSupportImg {
+    display: none;
+  }
+
   .mainimage {
     max-width: 90%;
     min-height: 900px;
@@ -429,6 +444,10 @@ button {
     line-height: 50px;
   }
 
+  .updateNews h1 {
+    padding-bottom: 2%;
+  }
+
   .updateNews button {
     max-width: 35%;
     margin-bottom: 3%;
@@ -444,5 +463,38 @@ button {
   .IndividualTitles section h2 {
     font-size: 2.5em;
     line-height: 80px;
+  }
+
+  .ComparisonVideo {
+    max-width: 63%;
+  }
+
+  .pre-purchase {
+    max-width: 74%;
+    min-height: 700px;
+    margin: 0 13% 5%;
+  }
+
+  .pre-purchase h1 {
+    font-size: 2.5em;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  .pre-purchase button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pre-purchase img {
+    max-width: 57%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
   }
 }
