@@ -93,10 +93,6 @@ header ul li::after {
     display: block;
 }
 
-.headertitle h3 {
-    font-size: 0.9em;
-}
-
 /* 데스크탑 제외)햄버거 메뉴 기본 설정 */
 .mobile {
     width: 100%;
