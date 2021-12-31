@@ -110,6 +110,7 @@ button {
   max-width: 90%;
   min-height: 50vw;
   padding: 5%;
+  border: none;
 }
 
 /* 서브 - 게임 소개 텍스트 박스 */
@@ -139,7 +140,7 @@ button {
 }
 
 /* 서브 - 개선 사항 - 2 */
-.introduction span {
+.introduction section {
   width: 100%;
   height: auto;
   text-align: center;
@@ -147,7 +148,7 @@ button {
   padding: 5%;
 }
 
-.introduction span p {
+.introduction section p {
   line-height: 35px;
 }
 
@@ -405,11 +406,11 @@ button {
   }
 
   /* 반응형 - 데스크탑 개선 사항 - 2 */
-  .introduction span {
+  .introduction section {
     padding: 0 5%;
   }
 
-  .introduction span p {
+  .introduction section p {
     line-height: 40px;
   }
 
