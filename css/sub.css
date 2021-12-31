@@ -193,6 +193,7 @@ button {
   padding: 0 5%;
 }
 
+/* 서브 - 개별적 타이틀 세번째 */
 #wrap .IndividualTitles section:nth-of-type(3) h2 {
   font-size: 1.4em;
 }
@@ -204,8 +205,6 @@ button {
 .IndividualTitles section:not(:first-child) {
   display: none;
 }
-
-/* .IndividualTitles section h2 {} */
 
 /* 서브 - 개별적 타이틀 밑 로고 */
 .IndividualTitles .titleLogo {
@@ -221,7 +220,7 @@ button {
   height: 86px;
 }
 
-/* 서브 - 리마스터 전/후 비교 동영상 슬라이더 */
+/* 서브 - 리마스터 전/후 비교 동영상 슬라이더 시작 */
 .ComparisonVideo {
   position: relative;
   overflow: hidden;
@@ -256,6 +255,8 @@ button {
   width: auto;
   max-width: none;
 }
+
+/* 서브 - 리마스터 전/후 비교 동영상 슬라이더 끝 */
 
 /* 서브 - 하단 구매 섹션 */
 .pre-purchase {
@@ -300,6 +301,7 @@ button {
     padding: 10% 5%;
   }
 
+  /* 반응형 - 모바일 개선 사항 - 1 */
   .introduction ul {
     padding-left: 15%;
   }
@@ -356,6 +358,7 @@ button {
     display: none;
   }
 
+  /* 반응형 - 데스크탑 게임소개 페이지 */
   .introduction {
     flex-direction: row;
     justify-content: space-between;
@@ -363,6 +366,7 @@ button {
     margin: 0 auto;
   }
 
+  /* 반응형 - 데스크탑 유튜브 영상 & 텍스트 박스 */
   .introduction .twinbox {
     min-height: 450px;
     flex-flow: row nowrap;
@@ -370,6 +374,7 @@ button {
     margin-bottom: 0;
   }
 
+  /* 반응형 - 데스크탑 유튜브 영상 */
   .introduction iframe {
     max-width: 800px;
     min-height: 450px;
@@ -377,12 +382,14 @@ button {
     margin-right: 5%;
   }
 
+  /* 반응형 - 데스크탑 게임 소개 텍스트 박스 */
   .introduction aside {
     max-width: 38%;
     padding-left: 5%;
     text-align: left;
   }
 
+  /* 반응형 - 데스크탑 개선 사항 - 1 */
   .introduction ul {
     flex-flow: row wrap;
     justify-content: space-around;
@@ -397,6 +404,7 @@ button {
     list-style-image: url("../img/list_gunimg.jpg");
   }
 
+  /* 반응형 - 데스크탑 개선 사항 - 2 */
   .introduction span {
     padding: 0 5%;
   }
@@ -405,24 +413,29 @@ button {
     line-height: 40px;
   }
 
+  /* 반응형 - 데스크탑 업데이트 소식  */
   .updateNews {
     padding: 0 5%;
   }
 
+  /* 반응형 - 데스크탑 업데이트 소식 내용 */
   .updateNews p {
     padding-bottom: 2%;
   }
 
+  /* 반응형 - 데스크탑 업데이트 소식 버튼 */
   .updateNews button {
     margin-bottom: 3%;
   }
 
+  /* 반응형 - 데스크탑 업데이트 소식 밑 개별적 타이틀 */
   .IndividualTitles {
     max-width: 45%;
     padding: 0 27.5%;
     margin: 0;
   }
 
+  /* 반응형 - 데스크탑 개별적 타이틀 세번째 */
   #wrap .IndividualTitles section:nth-of-type(3) h2 {
     font-size: 2.0em;
   }
@@ -432,11 +445,13 @@ button {
     min-height: 85px;
   }
 
+  /* 반응형 - 데스크탑 리마스터 전/후 비교 동영상 슬라이더 */
   .ComparisonVideo {
     max-width: 63%;
     margin: 5% auto;
   }
 
+  /* 반응형 - 데스크탑 하단 구매 섹션 */
   .pre-purchase {
     max-width: 63vw;
     height: 36vw;
