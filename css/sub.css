@@ -11,7 +11,29 @@ button:hover {
   border: 2px solid #9f8354;
 }
 
-/* 서브 - 수평선 */
+/* 서브 - 기본 설정 */
+#wrap h2,
+#wrap h3 {
+  padding-bottom: 5%;
+}
+
+#wrap h2 {
+  font-size: 1.6em;
+}
+
+#wrap h3 {
+  font-size: 1.4em;
+}
+
+#wrap p {
+  font-size: 0.9em;
+}
+
+#wrap img {
+  width: 100%;
+  height: auto;
+}
+
 hr {
   width: 100%;
   max-width: 90%;
@@ -20,53 +42,45 @@ hr {
   margin: 5% auto;
 }
 
-#wrap h2 {
-  font-size: 1.6em;
-}
+/* 서브 - 기본 설정 끝*/
 
-#wrap h3 {
-  font-size: 1.6em;
-}
-
-
-
-/* 서브 - 메인 이미지 기본 설정 */
+/* 서브 - 상단 구매 페이지 기본 설정 */
 .mainimage {
-  width: 100%;
-  height: auto;
+  width: 90vw;
+  height: 100vw;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-around;
-  min-height: 720px;
+  justify-content: space-between;
+  padding: 5%;
 }
 
-.mainimage img {
-  width: 100%;
-  height: auto;
-  max-width: 50%;
+.headImg {
+  max-width: 70%;
 }
 
 .pcSupportImg {
   display: none;
+  max-width: 50%;
 }
 
 .mobileSupportImg {
   display: block;
+  max-width: 80%;
 }
 
-/* 서브 - 상단, 하단 구매하기 버튼 */
+/* 서브 - 버튼 기본 설정 */
 button {
   width: 100%;
+  max-width: 80%;
   height: auto;
   color: #fff;
-  max-width: 40%;
   min-height: 100px;
-  font-size: 2.0em;
+  font-size: 1.4em;
   border: 2px solid #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #000;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 /* 서브 - 게임소개 페이지 */
@@ -82,11 +96,11 @@ button {
 .introduction .twinbox {
   width: 100%;
   height: auto;
-  min-height: 600px;
+  min-height: 50vw;
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 10%;
   justify-content: space-between;
+  margin-bottom: 10%;
 }
 
 /* 서브 - 유튜브 영상 */
@@ -98,7 +112,7 @@ button {
   padding: 5%;
 }
 
-/* 서브 - 게임 소개 */
+/* 서브 - 게임 소개 텍스트 박스 */
 .introduction aside {
   width: 100%;
   height: auto;
@@ -107,35 +121,24 @@ button {
   text-align: center;
 }
 
-/* .introduction h1 {
-  font-size: 2.2em;
-  line-height: 80px;
-  padding-bottom: 5%;
-} */
-
-/* .introduction p {
-  font-size: 1.15em;
-  line-height: 30px;
-  padding: 5% 0;
-} */
-
-/* 서브 - 개선 사항 */
+/* 서브 - 개선 사항 - 1 */
 .introduction ul {
   width: 100%;
   max-width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
-  /* padding-left: 15%; */
   padding: 0 10%;
+  font-size: 0.95em;
 }
 
 .introduction ul li {
-  line-height: 45px;
+  line-height: 4;
   list-style-image: url("../img/mobile_gunimg.jpg");
   color: #d89100;
 }
 
+/* 서브 - 개선 사항 - 2 */
 .introduction span {
   width: 100%;
   height: auto;
@@ -144,18 +147,9 @@ button {
   padding: 5%;
 }
 
-/* .introduction span h1 {
-  line-height: 120px;
-} */
-
-/* .introduction span p {
-  line-height: 30px;
-} */
-
-/* .introduction span p {
-  font-size: 1.2em;
-  line-height: 50px;
-} */
+.introduction span p {
+  line-height: 35px;
+}
 
 /* 서브 - 업데이트 소식  */
 .updateNews {
@@ -170,19 +164,17 @@ button {
 }
 
 /* 서브 - 업데이트 소식 내용 */
-/* .updateNews p {
+.updateNews p {
   padding-bottom: 5%;
-} */
+}
 
 /* 서브 - 업데이트 소식 받기 버튼 */
 .updateNews button {
-  margin-bottom: 10%;
-  padding: 2% 0;
-  font-size: 1.5em;
   background: #ffab00;
   color: #000;
   opacity: 0.8;
-  transition: opacity 0.5s ease-out;
+  padding: 2% 0;
+  margin-bottom: 10%;
 }
 
 .updateNews button:hover {
@@ -198,7 +190,15 @@ button {
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
-  margin: 0 5%;
+  padding: 0 5%;
+}
+
+#wrap .IndividualTitles section:nth-of-type(3) h2 {
+  font-size: 1.4em;
+}
+
+.IndividualTitles section p {
+  height: 120px;
 }
 
 .IndividualTitles section:not(:first-child) {
@@ -216,12 +216,9 @@ button {
   justify-content: space-evenly;
 }
 
-.IndividualTitles .titleLogo img::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: orange;
+#wrap .IndividualTitles .titleLogo img {
+  width: 81px;
+  height: 86px;
 }
 
 /* 서브 - 리마스터 전/후 비교 동영상 슬라이더 */
@@ -283,160 +280,72 @@ button {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 60%;
+  min-height: 60px;
 }
 
 .pre-purchase img {
-  width: 100%;
   max-width: 70%;
-  height: auto;
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
 }
 
-/* 반응형 - 모바일 시작 */
+/* 반응형 - 모바일 */
 @media all and (min-width:320px) and (max-width:767px) {
 
-  #wrap h2,
-  #wrap h3 {
-    padding-bottom: 5%;
+  /* 반응형 - 모바일 상단 구매 페이지 */
+  .mainimage {
+    padding: 10% 5%;
   }
-
-  #wrap p {
-    font-size: 0.9em;
-  }
-
-  /* 반응형 - 모바일 상단 구매 페이지 시작 */
-  .mainimage img {
-    max-width: 100%;
-  }
-
-  .mainimage .pcSupportImg {
-    display: none;
-  }
-
-  .mainimage .mobileSupportImg {
-    display: block;
-    max-width: 80%;
-  }
-
-  button {
-    max-width: 80%;
-    min-height: auto;
-    border-radius: 10px;
-  }
-
-  /* 반응형 - 모바일 메인 이미지 끝 */
-
-  /* 반응형 - 모바일 메인 이미지 밑 게임소개 페이지 시작 */
-  .introduction {
-    flex-flow: column wrap;
-  }
-
-  .introduction aside {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  /* .introduction aside h1 {
-    font-size: 1.6em;
-    line-height: normal;
-  } */
-
-  /* .introduction aside p {
-    line-height: 40px;
-  } */
 
   .introduction ul {
-    max-width: 80%;
-    flex-direction: column;
     padding-left: 15%;
   }
-
-  .introduction ul li {
-    line-height: 4;
-    font-size: 0.95em;
-  }
-
-  .introduction ul li:nth-of-type(2n) {
-    line-height: 150%;
-  }
-
-  /* .introduction span h1 {
-    line-height: normal;
-    font-size: 1.6em;
-  } */
-
-  /* .updateNews h1 {
-    font-size: 1.3em;
-  } */
-
-  .updateNews p {
-    padding-bottom: 5%;
-  }
-
-  .updateNews button {
-    font-size: 0.8em;
-  }
-
-  /* .IndividualTitles {
-    max-width: 90%;
-    margin: 0 auto;
-  } */
-
-  .IndividualTitles section {
-    min-height: 210px;
-  }
-
-  .IndividualTitles section h3 {
-    min-height: 75px;
-  }
-
-  .IndividualTitles section p {
-    min-height: 120px;
-  }
-
-  .pre-purchase button {
-    max-width: 90%;
-    font-size: 1.2em;
-    /* bottom: 20%; */
-    min-height: 60px;
-  }
 }
 
+/* 반응형 - 태블릿 */
 @media all and (min-width:768px) and (max-width:1023px) {
 
-  #wrap h2,
-  #wrap h3 {
-    padding-bottom: 5%;
-  }
-
-  .mainimage {
-    min-height: 800px;
-  }
-
-  .introduction ul {
-    font-size: 0.95em;
-  }
-
-  .updateNews p {
-    padding-bottom: 3%;
-  }
-
-  .IndividualTitles section p {
-    padding-bottom: 3%;
+  /* 반응형 - 태블릿 플랫폼 이미지 */
+  .mainimage .mobileSupportImg {
+    max-width: 70%;
   }
 }
 
+/* 반응형 - 데스크탑 시작 */
 @media all and (min-width:1024px) and (max-width:1920px) {
+
+  /* 반응형 - 데스크탑 기본 설정 시작 */
   #wrap h2 {
     font-size: 2.0em;
     padding-bottom: 3.5%;
   }
 
+  #wrap h3 {
+    font-size: 1.7em;
+  }
+
   #wrap p {
     font-size: 1.2em;
+  }
+
+  hr {
+    display: block;
+  }
+
+  button {
+    max-width: 40%;
+    min-height: 100px;
+    border-radius: 20px;
+  }
+
+  /* 반응형 - 데스크탑 기본 설정 끝 */
+
+  /* 반응형 - 데스크탑 상단 구매 페이지 */
+  .mainimage {
+    height: 60vw;
   }
 
   .pcSupportImg {
@@ -447,16 +356,6 @@ button {
     display: none;
   }
 
-  .mainimage {
-    max-width: 90%;
-    min-height: 900px;
-    margin: 0 auto;
-  }
-
-  hr {
-    display: block;
-  }
-
   .introduction {
     flex-direction: row;
     justify-content: space-between;
@@ -465,13 +364,10 @@ button {
   }
 
   .introduction .twinbox {
-    /* max-width: 80%; */
+    min-height: 450px;
     flex-flow: row nowrap;
-    /* justify-content: space-around; */
     align-items: center;
     margin-bottom: 0;
-    min-height: 450px;
-    /* padding: 0 10%; */
   }
 
   .introduction iframe {
@@ -486,10 +382,6 @@ button {
     padding-left: 5%;
     text-align: left;
   }
-
-  /* .introduction h1 {
-    padding-bottom: 0;
-  } */
 
   .introduction ul {
     flex-flow: row wrap;
@@ -513,10 +405,6 @@ button {
     line-height: 40px;
   }
 
-  /* .updateNews h1 {
-    padding-bottom: 2%;
-  } */
-
   .updateNews {
     padding: 0 5%;
   }
@@ -526,11 +414,7 @@ button {
   }
 
   .updateNews button {
-    max-width: 35%;
     margin-bottom: 3%;
-    padding: 2% 0;
-    border-radius: 20px;
-    font-size: 1.5em;
   }
 
   .IndividualTitles {
@@ -539,13 +423,13 @@ button {
     margin: 0;
   }
 
-  /* .IndividualTitles section h2 {
-    font-size: 2.5em;
-    line-height: 80px;
-  } */
+  #wrap .IndividualTitles section:nth-of-type(3) h2 {
+    font-size: 2.0em;
+  }
 
   .IndividualTitles section p {
     padding: 3% 0;
+    min-height: 85px;
   }
 
   .ComparisonVideo {
@@ -554,31 +438,12 @@ button {
   }
 
   .pre-purchase {
-    /* max-width: 74%; */
     max-width: 63vw;
     height: 36vw;
     margin: 0 auto 5%;
   }
 
-  .pre-purchase h3 {
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-  }
-
   .pre-purchase button {
-    position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .pre-purchase img {
-    max-width: 60%;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
   }
 }
