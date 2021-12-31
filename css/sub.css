@@ -133,7 +133,7 @@ button {
 }
 
 .introduction ul li {
-  line-height: 4;
+  line-height: 30px;
   list-style-image: url("../img/mobile_gunimg.jpg");
   color: #d89100;
 }
