@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 메인 - 마우스오버 효과 기본 설정 */
-:is(article, section a, main img, #snsbox img, #image3dbones div img):hover {
+:is(.newswide, .newswide-container a, main img, #snsbox img, #image3dbones div img):hover {
     cursor: pointer;
 }
 
@@ -12,7 +12,7 @@
 }
 
 /* 메인 - 뉴스 와이드 기본 설정 */
-section {
+.newswide-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -22,7 +22,7 @@ section {
 }
 
 /* 메인 - 뉴스 와이드 아티클 기본 설정 */
-article {
+.newswide {
     width: 100%;
     height: auto;
     max-width: 80%;
@@ -33,44 +33,44 @@ article {
     transition: all 0.3s ease-in-out;
 }
 
-article:hover {
+.newswide:hover {
     transform: scale(1.0);
 }
 
 /* 메인 - 뉴스 와이드 아티클 배경 이미지 */
-article:nth-of-type(1) {
+.newswide:nth-of-type(1) {
     background-image: url("../img/newsimg4.jpg");
 }
 
-article:nth-of-type(2) {
+.newswide:nth-of-type(2) {
     background-image: url("../img/newsimg1.jpg");
 }
 
-article:nth-of-type(3) {
+.newswide:nth-of-type(3) {
     background-image: url("../img/newsimg3.jpg");
 }
 
 /* 메인 - 뉴스 와이드 텍스트 기본 설정 */
-article h4,
-article p,
-article time {
+.newswide h4,
+.newswide p,
+.newswide span {
     font-size: 1.1em;
     text-align: center;
     line-height: 40px;
 }
 
-article time {
+.newswide span {
     display: block;
     color: #bcbcbc;
     margin-top: 100%;
 }
 
-article p {
+.newswide p {
     line-height: normal;
 }
 
 /* 메인 - 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 기본 설정 */
-section a {
+.newswide-container a {
     width: 100%;
     height: auto;
     max-width: 90px;
@@ -78,12 +78,12 @@ section a {
     position: absolute;
 }
 
-section a span {
+.newswide-container a span {
     font-size: 1.05em;
 }
 
 /* 메인 - 모두 보기 화살표 기본 설정 */
-section a img {
+.newswide-container a img {
     width: 100%;
     height: auto;
     max-width: 14px;
@@ -94,7 +94,7 @@ section a img {
     right: 0;
 }
 
-section a:hover .more_news {
+.newswide-container a:hover .more_news {
     right: -10px;
 }
 
@@ -197,13 +197,13 @@ aside #imagebox span {
     height: auto;
 }
 
-aside #imagebox #asidebold {
+aside #imagebox .asidebold {
     font-weight: bold;
     line-height: 50px;
     font-size: 1.15em;
 }
 
-aside #imagebox #asidetext {
+aside #imagebox .asidetext {
     max-width: 90%;
     min-height: 75px;
     line-height: 25px;
@@ -236,12 +236,14 @@ aside #image3dbones div img {
     width: 100%;
     height: auto;
 }
+
 /* 메인 - 기본 설정 끝 */
 
 /* 반응형 - 모바일 시작 */
 @media all and (max-width:380px) {
+
     /* 반응형 - 모바일 뉴스 와이드 모두 보기 */
-    section a {
+    .newswide-container a {
         bottom: -2%;
         left: 40%;
     }
@@ -254,8 +256,9 @@ aside #image3dbones div img {
 
 /* 반응형 - 모바일 가로 시작*/
 @media all and (min-width:381px) and (max-width:767px) {
+
     /* 반응형 - 모바일 가로 뉴스 와이드 모두 보기 */
-    section a {
+    .newswide-container a {
         bottom: -1%;
         left: 44%;
     }
@@ -263,8 +266,9 @@ aside #image3dbones div img {
 
 /* 반응형 - 태블릿 시작 */
 @media all and (min-width:768px) and (max-width:1023px) {
+
     /* 반응형 - 태블릿 뉴스 와이드 모두 보기 */
-    section a {
+    .newswide-container a {
         bottom: -1%;
         left: 45%;
     }
@@ -272,8 +276,9 @@ aside #image3dbones div img {
 
 /* 반응형 - 데스크탑 시작 */
 @media all and (min-width:1024px) and (max-width:1920px) {
+
     /* 반응형 - 데스크탑 비디오 슬라이드 밑 뉴스 와이드 */
-    section {
+    .newswide-container {
         max-width: 100%;
         min-height: 250px;
         flex-flow: row wrap;
@@ -282,20 +287,20 @@ aside #image3dbones div img {
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 아티클 */
-    article {
+    .newswide {
         max-width: 20%;
         margin: 0;
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 텍스트 */
-    article h4,
-    article p,
-    article time {
+    .newswide h4,
+    .newswide p,
+    .newswide span {
         font-size: 0.85em;
     }
 
     /* 반응형 - 데스크탑 뉴스 와이드 텍스트 오른쪽 밑 모두 보기 */
-    section a {
+    .newswide-container a {
         left: auto;
         right: 7%;
         bottom: -20%;
@@ -331,6 +336,7 @@ aside #image3dbones div img {
         min-height: 44px;
         margin: 0.4%;
     }
+
     /* 반응형 - 데스크탑 메인 이미지 밑 SNS 메뉴바 끝 */
 
     /* 반응형 - 데스크탑 SNS 메뉴바 밑 게임소개 컨텐츠 */
@@ -360,7 +366,7 @@ aside #image3dbones div img {
         min-height: 300px;
     }
 
-    aside #imagebox #asidebold {
+    aside #imagebox .asidebold {
         padding: 10px;
         font-size: 1.3em;
     }
@@ -384,5 +390,6 @@ aside #image3dbones div img {
     aside #image3dbones div {
         max-width: 150px;
     }
+
     /* 반응형 - 데스크탑 게임소개 컨텐츠 끝 */
 }
